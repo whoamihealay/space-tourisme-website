@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
 import Explore from "../common/components/Explore";
-import Container from "../common/components/Container";
+import { Container } from "../common/components/styles/Container.styled";
 import Layout from "../common/components/Layout";
 
 const StyledHomePage = styled.div`
@@ -45,7 +45,6 @@ const HomePage = () => {
         <Head>
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
-
         <Container>
           <Article>
             <P1>So, you want to travel to</P1>

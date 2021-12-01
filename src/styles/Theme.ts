@@ -48,8 +48,8 @@ const theme = {
     csLow: "2.35px",
   },
   breakpoints: {
-    tablet: "min-width: 375px",
-    desktop: "min-width: 768px",
+    tablet: "min-width: 30em",
+    desktop: "min-width: 48em",
   },
   backgrounds: {
     mobile: {

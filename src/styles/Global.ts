@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -46,12 +45,23 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: 'Barlow', sans-serif;;
-      font-size: 1.125rem;
-      color: ${({theme}) => theme.colors.light};
-      background-color: ${({theme}) => theme.colors.dark};
+      font-family: 'Barlow', sans-serif;
+      color: ${({ theme }) => theme.colors.light};
+      background-color: ${({ theme }) => theme.colors.dark};
       line-height: 1.5;
       min-height: 100vh;
+    }
+
+    @media screen and (max-width: 30em) {
+      font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
+    }
+
+    @media screen and (min-width: 30em) {
+      font-size: ${({ theme }) => theme.fontSizes.tablet.fs400};
+    }
+
+    @media screen and (min-width: 48em) {
+      font-size: ${({ theme }) => theme.fontSizes.desktop.fs400}
     }
 
     #__next {
@@ -86,6 +96,6 @@ const GlobalStyles = createGlobalStyle`
   }
 }
 
-`
+`;
 
 export default GlobalStyles;

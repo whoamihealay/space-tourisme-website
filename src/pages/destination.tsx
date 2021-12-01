@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../common/components/Layout";
-import Container from "../common/components/Container";
+import Container from "../common/components/styles/Container.styled";
 import styled from "styled-components";
 import Planets from "../common/components/Planets";
 
