@@ -35,7 +35,7 @@ const Nav = () => {
     if (menu) {
       return (
         <Image
-          src={`/media/shared/icon-close.svg`}
+          src={`/assets/shared/icon-close.svg`}
           alt="menu-icon"
           width="24"
           height="21"
@@ -45,7 +45,7 @@ const Nav = () => {
     } else {
       return (
         <Image
-          src={`/media/shared/icon-hamburger.svg`}
+          src={`/assets/shared/icon-hamburger.svg`}
           alt="menu-icon"
           width="24"
           height="21"
@@ -57,7 +57,7 @@ const Nav = () => {
 
   return (
     <StyledNav>
-      <Image src="/media/shared/logo.svg" alt="Logo" width="40" height="40" />
+      <Image src="/assets/shared/logo.svg" alt="Logo" width="40" height="40" />
       <Wrapper>
         <Button />
       </Wrapper>
