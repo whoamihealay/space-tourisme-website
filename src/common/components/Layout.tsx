@@ -1,12 +1,12 @@
 import Meta from "./Meta";
-import Nav from "./Nav";
+import Header from "./Header";
 import Footer from "./Footer";
 
 const Layout = ({ children }: any) => {
   return (
     <>
       <Meta />
-      <Nav />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

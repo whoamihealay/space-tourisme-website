@@ -62,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     #__next {
-      min-height: 100vh;
+      height: 100%;
     }
 
     img,

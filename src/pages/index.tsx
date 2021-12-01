@@ -24,7 +24,7 @@ const HomeContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3em 0;
+    margin: 3em 0 0 auto;
     max-width: 120rem;
   }
 `;
