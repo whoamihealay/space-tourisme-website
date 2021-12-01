@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
+import { Description } from "./styles/P.styled";
 
 const StyledPLanets = styled.div`
   display: flex;
@@ -15,10 +16,9 @@ const StyledPLanets = styled.div`
   }
 `;
 
-const Description = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
-  padding-inline: 1em;
-  color: ${({ theme }) => theme.colors.accent};
+const Article = styled.article`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Menu = styled.div`
@@ -60,8 +60,8 @@ const Planets = ({ children }: JSX.ElementChildrenAttribute) => {
         width="170px"
         height="170px"
       />
-      <Menu>{children}</Menu>
-      <article className="card-planet">
+      <Article className="card-planet">
+        <Menu>{children}</Menu>
         <h2>{destinations.name}</h2>
         <Description>{destinations.description}</Description>
         <hr />
@@ -73,7 +73,7 @@ const Planets = ({ children }: JSX.ElementChildrenAttribute) => {
           <h3>EST. TRAVEL TIME</h3>
           <p>{destinations.travel}</p>
         </Info>
-      </article>
+      </Article>
     </StyledPLanets>
   );
 };

@@ -20,16 +20,6 @@ const GlobalStyles = createGlobalStyle`
       margin: 0;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      font-weight: 400;
-      font-size: 1.125rem;
-    }
 
     ul,
     ol,
@@ -41,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
 
     a {
       text-decoration: none;
-      color: var(--clr-white);
     }
 
     body {
@@ -50,18 +39,26 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${({ theme }) => theme.colors.dark};
       line-height: 1.5;
       min-height: 100vh;
+      min-width: 18.75rem;
     }
 
-    @media screen and (max-width: 30em) {
+    * {
       font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
+      font-weight: 400;
     }
+    
 
     @media screen and (min-width: 30em) {
+      * {
       font-size: ${({ theme }) => theme.fontSizes.tablet.fs400};
+      font-weight: 400;
     }
 
     @media screen and (min-width: 48em) {
-      font-size: ${({ theme }) => theme.fontSizes.desktop.fs400}
+      * {
+      font-size: ${({ theme }) => theme.fontSizes.desktop.fs400};
+      font-weight: 400;
+      }
     }
 
     #__next {
@@ -95,7 +92,6 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: auto !important;
   }
 }
-
-`;
+    }`;
 
 export default GlobalStyles;

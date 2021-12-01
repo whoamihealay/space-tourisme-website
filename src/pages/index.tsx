@@ -3,39 +3,54 @@ import React from "react";
 import styled from "styled-components";
 import Explore from "../common/components/Explore";
 import { Container } from "../common/components/styles/Container.styled";
+import { Description } from "../common/components/styles/P.styled";
 import Layout from "../common/components/Layout";
+import { H1 } from "../common/components/styles/Titles.styled";
 
 const StyledHomePage = styled.div`
   background-image: url(${({ theme }) => theme.backgrounds.mobile.bgHome});
   background-size: cover;
   min-height: 100vh;
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    background-image: url(${({ theme }) => theme.backgrounds.tablet.bgHome});
+  }
+  @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
+    background-image: url(${({ theme }) => theme.backgrounds.desktop.bgHome});
+  }
+`;
+
+const HomeContainer = styled(Container)`
+  @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em 0;
+    max-width: 120rem;
+  }
 `;
 
 const Article = styled.article`
   text-align: center;
+  margin: auto;
 `;
 
-const H1 = styled.h1`
+const HomeH1 = styled(H1)`
+  color: ${({ theme }) => theme.colors.accent};
+  padding: 1em;
+`;
+
+const Space = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.mobile.fs900};
   font-family: ${({ theme }) => theme.fonts.serif};
+  color: ${({ theme }) => theme.colors.light};
+  line-height: 100%;
   text-transform: uppercase;
-  max-height: 100px;
-  margin: 1rem;
-`;
-
-const P1 = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs500};
-  font-family: ${({ theme }) => theme.fonts.sansSerif};
-  color: ${({ theme }) => theme.colors.accent};
-  letter-spacing: ${({ theme }) => theme.charSpacing.csMed};
-  text-transform: uppercase;
-`;
-
-const P2 = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
-  color: ${({ theme }) => theme.colors.accent};
-  padding: 0.5rem;
-  line-height: 167%;
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.tablet.fs900};
+  }
+  @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: ${({ theme }) => theme.fontSizes.desktop.fs900};
+  }
 `;
 
 const HomePage = () => {
@@ -45,19 +60,21 @@ const HomePage = () => {
         <Head>
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
-        <Container>
+        <HomeContainer>
           <Article>
-            <P1>So, you want to travel to</P1>
-            <H1>Space</H1>
-            <P2>
+            <HomeH1>
+              So, you want to travel to
+              <Space>Space</Space>
+            </HomeH1>
+            <Description>
               Let’s face it; if you want to go to space, you might as well
               genuinely go to outer space and not hover kind of on the edge of
               it. Well sit back, and relax because we’ll give you a truly out of
               this world experience!
-            </P2>
+            </Description>
           </Article>
           <Explore />
-        </Container>
+        </HomeContainer>
       </Layout>
     </StyledHomePage>
   );

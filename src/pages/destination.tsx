@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../common/components/Layout";
-import Container from "../common/components/styles/Container.styled";
+import { Container } from "../common/components/styles/Container.styled";
 import styled from "styled-components";
 import Planets from "../common/components/Planets";
+import { H1 } from "../common/components/styles/Titles.styled";
 
 const StyledDestination = styled.div`
   background-image: url(${({ theme }) => theme.backgrounds.mobile.bgDest});
@@ -32,9 +33,9 @@ const Destination = () => {
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
         <Container>
-          <h1>
+          <H1>
             <span aria-hidden="true">01</span> Pick your destination
-          </h1>
+          </H1>
           <Planets>
             <button onClick={() => getDest("Moon")}>Moon</button>{" "}
             <button>Mars</button>
