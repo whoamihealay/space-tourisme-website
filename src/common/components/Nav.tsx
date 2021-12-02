@@ -107,17 +107,17 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="/destination">
+            <a href="#">
               <span aria-hidden="true">01</span> DESTINATION
             </a>
           </li>
           <li>
-            <a href="/crew">
+            <a href="#">
               <span aria-hidden="true">02</span> CREW
             </a>
           </li>
           <li>
-            <a href="/technologies">
+            <a href="#">
               <span aria-hidden="true">03</span> TECHNOLOGIES
             </a>
           </li>
