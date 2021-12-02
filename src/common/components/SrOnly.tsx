@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledSrOnly = styled.div`
+export const SrOnly = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -12,9 +11,3 @@ const StyledSrOnly = styled.div`
   white-space: nowrap;
   border: 0;
 `;
-
-const SrOnly = ({ children }: JSX.ElementChildrenAttribute) => {
-  return <StyledSrOnly>{children}</StyledSrOnly>;
-};
-
-export default SrOnly;

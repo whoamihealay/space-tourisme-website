@@ -51,6 +51,7 @@ declare module "styled-components" {
       csLow: string;
     };
     breakpoints: {
+      mobile: string;
       tablet: string;
       desktop: string;
     };
@@ -124,6 +125,7 @@ const theme: DefaultTheme = {
     csLow: "2.35px",
   },
   breakpoints: {
+    mobile: "max-width: 30em",
     tablet: "min-width: 30em",
     desktop: "min-width: 64em",
   },

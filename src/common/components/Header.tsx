@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Nav from "./Nav";
@@ -31,53 +31,12 @@ const Line = styled.hr`
   }
 `;
 
-const Wrapper = styled.div`
-  z-index: 1000;
-  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-`;
-
 const Header = () => {
-  const [menu, setMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setMenu(!menu);
-  };
-
-  const Button = () => {
-    if (menu) {
-      return (
-        <Image
-          src={`/assets/shared/icon-close.svg`}
-          alt="menu-icon"
-          width="24"
-          height="21"
-          onClick={toggleMenu}
-        />
-      );
-    } else {
-      return (
-        <Image
-          src={`/assets/shared/icon-hamburger.svg`}
-          alt="menu-icon"
-          width="24"
-          height="21"
-          onClick={toggleMenu}
-        />
-      );
-    }
-  };
   return (
     <StyledHeader>
       <Image src="/assets/shared/logo.svg" alt="Logo" width="48" height="48" />
       <Line />
-      <Wrapper>
-        <Button />
-      </Wrapper>
-      {menu && <Nav />}
+      <Nav />
     </StyledHeader>
   );
 };
