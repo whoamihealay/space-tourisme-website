@@ -94,12 +94,12 @@ const theme: DefaultTheme = {
     tablet: {
       bgHome: "./assets/home/background-home-tablet.jpg",
       bgDest: "./assets/destination/background-destination-tablet.jpg",
-      bgCrew: "",
+      bgCrew: "./assets/crew/background-crew-tablet.jpg",
     },
     desktop: {
       bgHome: "./assets/home/background-home-desktop.jpg",
       bgDest: "./assets/destination/background-destination-desktop.jpg",
-      bgCrew: "",
+      bgCrew: "./assets/crew/background-crew-desktop.jpg",
     },
   },
 };

@@ -111,7 +111,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="crew">
               <span aria-hidden="true">02</span> CREW
             </a>
           </li>

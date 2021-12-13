@@ -14,3 +14,10 @@ export const H1 = styled.h1`
     text-align: left;
   }
 `;
+
+export const StyledH1 = styled(H1)`
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    text-align: left;
+    padding-left: 2em;
+  }
+`;
