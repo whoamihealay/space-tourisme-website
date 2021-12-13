@@ -39,7 +39,8 @@ const Btn = styled.button`
   height: 2.5rem;
   color: ${({ theme }) => theme.colors.accent};
   text-transform: uppercase;
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom: 3px solid white;
     color: ${({ theme }) => theme.colors.light};
   }

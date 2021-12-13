@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Description } from "./styles/P.styled";
 import { Hr } from "./styles/Hr.styled";
+import useData from "../hooks/useData";
 
 const StyledPLanets = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ interface PlanetsProps {
 }
 
 const Planets = ({ dest, children }: PlanetsProps) => {
-  const [destinations, setDestinations] = useState([]);
+  const destinations = useData("destinations");
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -91,23 +92,22 @@ const Planets = ({ dest, children }: PlanetsProps) => {
   const [travel, setTravel] = useState("");
 
   useEffect(() => {
-    fetch("./data.json")
-      .then((res) => res.json())
-      .then((data) => setDestinations(data.destinations));
-  }, []);
-
-  useEffect(() => {
-    destinations.map((data) => {
-      if (data.name === dest) {
-        setName(data.name);
-        setImage(data.images.png);
-        setDescription(data.description);
-        setDistance(data.distance);
-        setTravel(data.travel);
-      } else {
-        return;
+    const getDestinations = () => {
+      if (destinations != null) {
+        destinations?.map((data: object) => {
+          if (data.name === dest) {
+            setName(data.name);
+            setImage(data.images.png);
+            setDescription(data.description);
+            setDistance(data.distance);
+            setTravel(data.travel);
+          } else {
+            return;
+          }
+        });
       }
-    });
+    };
+    getDestinations();
   }, [dest, destinations]);
 
   return (
