@@ -39,18 +39,14 @@ const HomeH1 = styled(H1)`
   padding: 1em;
 `;
 
-const Space = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs900};
+// !important to override span style precedance.
+const Space = styled.span`
+  font-size: ${({ theme }) => theme.fontSizes.fs900} !important;
   font-family: ${({ theme }) => theme.fonts.serif};
   color: ${({ theme }) => theme.colors.light};
   line-height: 100%;
   text-transform: uppercase;
-  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.fontSizes.tablet.fs900};
-  }
-  @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: ${({ theme }) => theme.fontSizes.desktop.fs900};
-  }
+  opacity: 1 !important;
 `;
 
 const HomePage = () => {
@@ -63,7 +59,7 @@ const HomePage = () => {
         <HomeContainer>
           <Article>
             <HomeH1>
-              So, you want to travel to
+              So, you want to travel to <br />
               <Space>Space</Space>
             </HomeH1>
             <Description>

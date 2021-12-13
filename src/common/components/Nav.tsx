@@ -6,7 +6,7 @@ const StyledNav = styled.nav`
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs500};
+  font-size: ${({ theme }) => theme.fontSizes.fs500};
   padding: 1em;
 
   li {
@@ -27,6 +27,7 @@ const StyledNav = styled.nav`
     right: 0;
     width: 75%;
     height: 100%;
+    z-index: 900;
     ul {
       margin: 8em 1em;
     }
@@ -39,7 +40,6 @@ const StyledNav = styled.nav`
   }
 
   @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.fontSizes.tablet.fs500};
     padding: 1em;
     ul {
       display: flex;
@@ -51,7 +51,6 @@ const StyledNav = styled.nav`
   }
 
   @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: ${({ theme }) => theme.fontSizes.desktop.fs500};
     padding: 1em 5em;
     ul {
       gap: 2em;
@@ -67,7 +66,7 @@ const Button = ({ toggle }) => {
     display: none;
     @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
       display: block;
-      position: absolute;
+      position: sticky;
       background: url("./assets/shared/icon-hamburger.svg") no-repeat;
       border: none;
       width: 24px;

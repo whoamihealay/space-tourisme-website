@@ -17,6 +17,32 @@ const StyledDestination = styled.div`
     text-transform: uppercase;
     letter-spacing: ${({ theme }) => theme.charSpacing.csMed};
   }
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    background-image: url(${({ theme }) => theme.backgrounds.tablet.bgDest});
+  }
+  @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
+    background-image: url(${({ theme }) => theme.backgrounds.desktop.bgDest});
+  }
+`;
+
+const StyledH1 = styled(H1)`
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    text-align: left;
+    padding-left: 2em;
+  }
+`;
+
+const Btn = styled.button`
+  background-color: transparent;
+  border: none;
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
+  height: 2.5rem;
+  color: ${({ theme }) => theme.colors.accent};
+  text-transform: uppercase;
+  &:hover {
+    border-bottom: 3px solid white;
+    color: ${({ theme }) => theme.colors.light};
+  }
 `;
 
 const Destination = () => {
@@ -33,14 +59,14 @@ const Destination = () => {
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
         <Container>
-          <H1>
+          <StyledH1>
             <span aria-hidden="true">01</span> Pick your destination
-          </H1>
-          <Planets>
-            <button onClick={() => getDest("Moon")}>Moon</button>{" "}
-            <button>Mars</button>
-            <button>Europa</button>
-            <button>Titan</button>
+          </StyledH1>
+          <Planets dest={dest}>
+            <Btn onClick={() => getDest("Moon")}>Moon</Btn>
+            <Btn onClick={() => getDest("Mars")}>Mars</Btn>
+            <Btn onClick={() => getDest("Europa")}>Europa</Btn>
+            <Btn onClick={() => getDest("Titan")}>Titan</Btn>
           </Planets>
         </Container>
       </Layout>

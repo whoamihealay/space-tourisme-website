@@ -43,20 +43,18 @@ const GlobalStyles = createGlobalStyle`
     }
 
     * {
-      font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
+      font-size: ${({ theme }) => theme.fontSizes.fs400};
       font-weight: 400;
     }
     
 
     @media screen and (min-width: 30em) {
       * {
-      font-size: ${({ theme }) => theme.fontSizes.tablet.fs400};
       font-weight: 400;
     }
 
     @media screen and (min-width: 48em) {
       * {
-      font-size: ${({ theme }) => theme.fontSizes.desktop.fs400};
       font-weight: 400;
       }
     }

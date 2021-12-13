@@ -14,36 +14,14 @@ declare module "styled-components" {
       sansSerif: string;
     };
     fontSizes: {
-      mobile: {
-        fs900: string;
-        fs800: string;
-        fs700: string;
-        fs600: string;
-        fs500: string;
-        fs400: string;
-        fs300: string;
-        fs200: string;
-      };
-      tablet: {
-        fs900: string;
-        fs800: string;
-        fs700: string;
-        fs600: string;
-        fs500: string;
-        fs400: string;
-        fs300: string;
-        fs200: string;
-      };
-      desktop: {
-        fs900: string;
-        fs800: string;
-        fs700: string;
-        fs600: string;
-        fs500: string;
-        fs400: string;
-        fs300: string;
-        fs200: string;
-      };
+      fs900: string;
+      fs800: string;
+      fs700: string;
+      fs600: string;
+      fs500: string;
+      fs400: string;
+      fs300: string;
+      fs200: string;
     };
     charSpacing: {
       csHi: string;
@@ -88,36 +66,14 @@ const theme: DefaultTheme = {
     sansSerif: "'Barlow Condensed', sans-serif",
   },
   fontSizes: {
-    mobile: {
-      fs900: "5rem",
-      fs800: "3.75rem",
-      fs700: "1.75rem",
-      fs600: "1.25rem",
-      fs500: "1rem",
-      fs400: "0.938rem",
-      fs300: "0.75rem",
-      fs200: "0.625rem",
-    },
-    tablet: {
-      fs900: "9.375rem",
-      fs800: "",
-      fs700: "",
-      fs600: "1.25rem",
-      fs500: "1.25rem",
-      fs400: "1rem",
-      fs300: "",
-      fs200: "",
-    },
-    desktop: {
-      fs900: "9.375rem",
-      fs800: "6.25rem",
-      fs700: "3.5rem",
-      fs600: "2rem",
-      fs500: "1.75rem",
-      fs400: "1.125rem",
-      fs300: "1rem",
-      fs200: "0.875",
-    },
+    fs900: "clamp(5rem, 10vw, 9.375rem)",
+    fs800: "clamp(3.75rem, 3vw, 6.25rem)",
+    fs700: "clamp(1.75rem, 3vw, 3.5rem)",
+    fs600: "clamp(1.25rem, 5vw, 2rem)",
+    fs500: "clamp(1rem, 2.5vw, 1.75rem)",
+    fs400: "clamp(0.938rem, 2vw, 1.125rem)",
+    fs300: "clamp(0.75rem, 2.5vw, 1rem)",
+    fs200: "clamp(0.625rem, 2.5vw, 0.875rem)",
   },
   charSpacing: {
     csHi: "4.75px",
@@ -137,12 +93,12 @@ const theme: DefaultTheme = {
     },
     tablet: {
       bgHome: "./assets/home/background-home-tablet.jpg",
-      bgDest: "",
+      bgDest: "./assets/destination/background-destination-tablet.jpg",
       bgCrew: "",
     },
     desktop: {
       bgHome: "./assets/home/background-home-desktop.jpg",
-      bgDest: "",
+      bgDest: "./assets/destination/background-destination-desktop.jpg",
       bgCrew: "",
     },
   },

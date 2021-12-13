@@ -12,7 +12,7 @@ const StyledExplore = styled.div`
   align-items: center;
   border-radius: 50%;
   font-family: ${({ theme }) => theme.fonts.serif};
-  font-size: ${({ theme }) => theme.fontSizes.mobile.fs400};
+  font-size: ${({ theme }) => theme.fontSizes.fs600};
   text-transform: uppercase;
   &:hover {
     box-shadow: 0 0 0 3rem hsla(0, 0%, 100%, 0.1);
@@ -21,7 +21,6 @@ const StyledExplore = styled.div`
   @media screen and (${({ theme }) => theme.breakpoints.tablet}) {
     width: 15.125rem;
     height: 15.125rem;
-    font-size: ${({ theme }) => theme.fontSizes.tablet.fs600};
     margin: 4em auto;
     &:hover {
       box-shadow: 0 0 0 4.25rem hsla(0, 0%, 100%, 0.1);
@@ -30,7 +29,6 @@ const StyledExplore = styled.div`
   @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
     width: 17.125rem;
     height: 17.125rem;
-    font-size: ${({ theme }) => theme.fontSizes.desktop.fs600};
     &:hover {
       box-shadow: 0 0 0 5.5rem hsla(0, 0%, 100%, 0.1);
     }
