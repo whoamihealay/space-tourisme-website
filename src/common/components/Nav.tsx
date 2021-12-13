@@ -106,7 +106,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/destination">
               <span aria-hidden="true">01</span> DESTINATION
             </a>
           </li>
