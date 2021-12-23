@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { StyledDestination, BtnDest } from "../styles/Destination.styled";
-import Layout from "../common/components/Layout";
-import { Container } from "../common/components/styles/Container.styled";
-import Planets from "../common/components/Planets";
-import { StyledH1 } from "../common/components/styles/Titles.styled";
+import Layout from "../components/Layout";
+import Planets from "../components/Planets";
 
 const Destination = () => {
   const [dest, setDest] = useState("Moon");
@@ -14,24 +11,44 @@ const Destination = () => {
   };
 
   return (
-    <StyledDestination>
+    <div className="min-h-screen text-center">
+      <Head>
+        <title>Frontend Mentor | Destination</title>
+      </Head>
       <Layout>
-        <Head>
-          <title>Frontend Mentor | Destination</title>
-        </Head>
-        <Container>
-          <StyledH1>
+        <div className="px-4 mx-auto max-w-7xl">
+          <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8">
             <span aria-hidden="true">01</span> Pick your destination
-          </StyledH1>
+          </h1>
           <Planets dest={dest}>
-            <BtnDest onClick={() => getDest("Moon")}>Moon</BtnDest>
-            <BtnDest onClick={() => getDest("Mars")}>Mars</BtnDest>
-            <BtnDest onClick={() => getDest("Europa")}>Europa</BtnDest>
-            <BtnDest onClick={() => getDest("Titan")}>Titan</BtnDest>
+            <button
+              className="bg-transparent border-none font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              onClick={() => getDest("Moon")}
+            >
+              Moon
+            </button>
+            <button
+              className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2  hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              onClick={() => getDest("Mars")}
+            >
+              Mars
+            </button>
+            <button
+              className="bg-transparent border-none font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              onClick={() => getDest("Europa")}
+            >
+              Europa
+            </button>
+            <button
+              className="bg-transparent border-none font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              onClick={() => getDest("Titan")}
+            >
+              Titan
+            </button>
           </Planets>
-        </Container>
+        </div>
       </Layout>
-    </StyledDestination>
+    </div>
   );
 };
 

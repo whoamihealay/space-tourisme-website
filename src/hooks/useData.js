@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function useData(value) {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () =>

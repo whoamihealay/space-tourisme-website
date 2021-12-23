@@ -1,11 +1,9 @@
-import Meta from "./Meta";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children }: any) => {
+const Layout = ({ children }: JSX.ElementChildrenAttribute) => {
   return (
     <>
-      <Meta />
       <Header />
       <main>{children}</main>
       <Footer />
