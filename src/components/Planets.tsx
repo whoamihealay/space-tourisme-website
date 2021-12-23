@@ -22,7 +22,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
         destinations.map((data: DestInterface) => {
           if (data.name === dest) {
             setName(data.name);
-            setImage(data.images.png);
+            setImage(data.images.webp);
             setDescription(data.description);
             setDistance(data.distance);
             setTravel(data.travel);
@@ -38,7 +38,16 @@ const Planets = ({ dest, children }: PlanetsProps) => {
   return (
     <div className="flex flex-col items-center text-center desktop:flex-row desktop:justify-around desktop:text-left">
       {image ? (
-        <Image src={image} alt={name} width={170} height={170} />
+        <div className="max-w-[534px] min-w-[250px] w-1/2 p-8">
+          <Image
+            src={image}
+            alt={name}
+            width={534}
+            height={534}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
       ) : (
         <div></div>
       )}
