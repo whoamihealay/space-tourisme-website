@@ -52,7 +52,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
         <div></div>
       )}
       <article className="flex flex-col">
-        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0">
+        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0 relative">
           {children}
         </div>
         <h2 className="font-serif text-3xl uppercase">{name}</h2>

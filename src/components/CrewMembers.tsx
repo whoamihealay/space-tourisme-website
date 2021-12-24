@@ -52,7 +52,7 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
       )}
       <hr className="w-full opacity-10 tablet:hidden" />
       <div className="tablet:flex tablet:flex-col-reverse">
-        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 desktop:mx-0">
+        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 desktop:mx-0 relative">
           {children}
         </div>
         <article className="flex flex-col">

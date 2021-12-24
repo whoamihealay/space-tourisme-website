@@ -53,7 +53,7 @@ const Technology = ({ tech, children }: TechProps) => {
         <div></div>
       )}
       <div className="desktop:flex">
-        <div className="flex desktop:flex-col gap-4 justify-center px-4 pt-4 pb-2">
+        <div className="flex desktop:flex-col gap-4 justify-center px-4 pt-4 pb-2 relative">
           {children}
         </div>
         <div className="px-4 py-2">
