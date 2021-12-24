@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Planets from "../components/Planets";
+import { DestinationBackgrounds } from "../components/Backgrounds";
 
 const Destination = () => {
   const [dest, setDest] = useState("Moon");
@@ -11,6 +12,7 @@ const Destination = () => {
       <Head>
         <title>Destination | Frontend Mentor </title>
       </Head>
+      <DestinationBackgrounds />
       <Layout>
         <div className="px-4 mx-auto max-w-7xl">
           <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8">

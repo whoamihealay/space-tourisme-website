@@ -5,7 +5,7 @@ const Layout = ({ children }: JSX.ElementChildrenAttribute) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="z-10">{children}</main>
       <Footer />
     </>
   );

@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-dark text-white font-body;
+    @apply text-white font-body;
     line-height: 1.5;
     min-height: 100vh;
     min-width: 18.75rem;

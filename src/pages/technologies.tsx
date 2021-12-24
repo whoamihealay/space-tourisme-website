@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import { TechnologiesBackgrounds } from "../components/Backgrounds";
 import Layout from "../components/Layout";
 import Technology from "../components/Technology";
 
@@ -11,6 +12,7 @@ const Technologies = () => {
       <Head>
         <title>Technologies | Frontend Mentor</title>
       </Head>
+      <TechnologiesBackgrounds />
       <Layout>
         <div className="mx-auto max-w-7xl">
           <h1 className="p-4 font-sans text-lg tracking-widest uppercase text-center text-white tablet:text-left tablet:p-0 tablet:pl-8 desktop:pl-O desktop:max-w-5xl desktop:mx-auto">

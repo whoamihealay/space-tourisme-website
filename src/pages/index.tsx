@@ -1,14 +1,16 @@
 import Head from "next/head";
 import React from "react";
+import { HomeBackgrounds } from "../components/Backgrounds";
 import Explore from "../components/Explore";
 import Layout from "../components/Layout";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen">
       <Head>
         <title>Frontend Mentor | Space tourism website</title>
       </Head>
+      <HomeBackgrounds />
       <Layout>
         <div className="px-4 mx-auto max-w-[90rem] desktop:flex desktop:justify-between desktop:items-center desktop:mt-12 desktop:ml-auto desktop:max-w-[120rem]">
           <article className="text-center m-auto">

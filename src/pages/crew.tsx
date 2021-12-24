@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import { CrewBackgrounds } from "../components/Backgrounds";
 import CrewMembers from "../components/CrewMembers";
 import Layout from "../components/Layout";
 
@@ -25,6 +26,7 @@ const Crew = () => {
       <Head>
         <title>Frontend Mentor | Crew</title>
       </Head>
+      <CrewBackgrounds />
       <Layout>
         <div className="px-4 mx-auto max-w-7xl">
           <h1 className="font-sans text-lg tracking-widest uppercase text-accent tablet:pl-8 tablet:text-left pb-8">
