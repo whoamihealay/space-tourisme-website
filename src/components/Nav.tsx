@@ -57,7 +57,10 @@ const Nav = () => {
           <li className="mobile:p-4">
             <Link href="/destination">
               <a className="text-white flex gap-2">
-                <span aria-hidden="true" className="font-bold">
+                <span
+                  aria-hidden="true"
+                  className="font-bold tablet:hidden desktop:block"
+                >
                   01
                 </span>{" "}
                 DESTINATION
@@ -67,7 +70,10 @@ const Nav = () => {
           <li className="mobile:p-4">
             <Link href="crew">
               <a className="text-white flex gap-2">
-                <span aria-hidden="true" className="font-bold">
+                <span
+                  aria-hidden="true"
+                  className="font-bold tablet:hidden desktop:block"
+                >
                   02
                 </span>{" "}
                 CREW
@@ -77,7 +83,10 @@ const Nav = () => {
           <li className="mobile:p-4">
             <Link href="/technologies">
               <a className="text-white flex gap-2">
-                <span aria-hidden="true" className="font-bold">
+                <span
+                  aria-hidden="true"
+                  className="font-bold tablet:hidden desktop:block"
+                >
                   03
                 </span>{" "}
                 TECHNOLOGIES

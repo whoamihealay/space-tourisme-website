@@ -16,7 +16,10 @@ const Technologies = () => {
       <Layout>
         <div className="mx-auto max-w-7xl">
           <h1 className="p-4 font-sans text-lg tracking-widest uppercase text-center text-white tablet:text-left tablet:p-0 tablet:pl-8 desktop:pl-O desktop:max-w-5xl desktop:mx-auto">
-            <span aria-hidden="true" className="opacity-50 text-lg">
+            <span
+              aria-hidden="true"
+              className="text-lg opacity-25 px-2 font-bold"
+            >
               03
             </span>{" "}
             Space Launch 101

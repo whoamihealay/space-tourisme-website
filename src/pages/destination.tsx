@@ -16,7 +16,13 @@ const Destination = () => {
       <Layout>
         <div className="px-4 mx-auto max-w-7xl">
           <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8">
-            <span aria-hidden="true">01</span> Pick your destination
+            <span
+              aria-hidden="true"
+              className="text-lg opacity-25 px-2 font-bold"
+            >
+              01
+            </span>{" "}
+            Pick your destination
           </h1>
           <Planets dest={dest}>
             <button
