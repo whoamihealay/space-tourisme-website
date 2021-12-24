@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 interface ButtonInterface {
   toggle: () => void;
@@ -41,39 +42,47 @@ const Nav = () => {
       >
         <ul className="mobile:my-32 mobile:mx-4 tablet:flex tablet:gap-4 desktop:gap-8">
           <li className="mobile:p-4">
-            <a href="/" className="text-white flex gap-2">
-              <span
-                aria-hidden="true"
-                className="font-bold tablet:hidden desktop:block"
-              >
-                00
-              </span>{" "}
-              HOME
-            </a>
+            <Link href="/">
+              <a className="text-white flex gap-2">
+                <span
+                  aria-hidden="true"
+                  className="font-bold tablet:hidden desktop:block"
+                >
+                  00
+                </span>{" "}
+                HOME
+              </a>
+            </Link>
           </li>
           <li className="mobile:p-4">
-            <a href="/destination" className="text-white flex gap-2">
-              <span aria-hidden="true" className="font-bold">
-                01
-              </span>{" "}
-              DESTINATION
-            </a>
+            <Link href="/destination">
+              <a className="text-white flex gap-2">
+                <span aria-hidden="true" className="font-bold">
+                  01
+                </span>{" "}
+                DESTINATION
+              </a>
+            </Link>
           </li>
           <li className="mobile:p-4">
-            <a href="crew" className="text-white flex gap-2">
-              <span aria-hidden="true" className="font-bold">
-                02
-              </span>{" "}
-              CREW
-            </a>
+            <Link href="crew">
+              <a className="text-white flex gap-2">
+                <span aria-hidden="true" className="font-bold">
+                  02
+                </span>{" "}
+                CREW
+              </a>
+            </Link>
           </li>
           <li className="mobile:p-4">
-            <a href="#" className="text-white flex gap-2">
-              <span aria-hidden="true" className="font-bold">
-                03
-              </span>{" "}
-              TECHNOLOGIES
-            </a>
+            <Link href="#">
+              <a className="text-white flex gap-2">
+                <span aria-hidden="true" className="font-bold">
+                  03
+                </span>{" "}
+                TECHNOLOGIES
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>
