@@ -38,7 +38,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
   return (
     <div className="flex flex-col items-center text-center desktop:flex-row desktop:justify-around desktop:text-left">
       {image ? (
-        <div className="max-w-[534px] min-w-[250px] w-1/2 p-8">
+        <div className="max-w-[534px] min-w-[250px] w-1/2 p-8 animate-spin-slow">
           <Image
             src={image}
             alt={name}
@@ -51,7 +51,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
       ) : (
         <div></div>
       )}
-      <article className="card-planet flex flex-col">
+      <article className="flex flex-col">
         <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0">
           {children}
         </div>

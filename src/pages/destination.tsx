@@ -6,14 +6,10 @@ import Planets from "../components/Planets";
 const Destination = () => {
   const [dest, setDest] = useState("Moon");
 
-  const getDest = (planet: string) => {
-    setDest(planet);
-  };
-
   return (
     <div className="min-h-screen text-center">
       <Head>
-        <title>Frontend Mentor | Destination</title>
+        <title>Destination | Frontend Mentor </title>
       </Head>
       <Layout>
         <div className="px-4 mx-auto max-w-7xl">
@@ -23,25 +19,25 @@ const Destination = () => {
           <Planets dest={dest}>
             <button
               className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
-              onClick={() => getDest("Moon")}
+              onClick={() => setDest("Moon")}
             >
               Moon
             </button>
             <button
               className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2  hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
-              onClick={() => getDest("Mars")}
+              onClick={() => setDest("Mars")}
             >
               Mars
             </button>
             <button
               className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
-              onClick={() => getDest("Europa")}
+              onClick={() => setDest("Europa")}
             >
               Europa
             </button>
             <button
               className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
-              onClick={() => getDest("Titan")}
+              onClick={() => setDest("Titan")}
             >
               Titan
             </button>

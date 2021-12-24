@@ -75,7 +75,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="mobile:p-4">
-            <Link href="#">
+            <Link href="/technologies">
               <a className="text-white flex gap-2">
                 <span aria-hidden="true" className="font-bold">
                   03

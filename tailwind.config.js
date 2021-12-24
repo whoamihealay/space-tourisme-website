@@ -32,6 +32,9 @@ module.exports = {
       boxShadow: {
         explore: "0 0 0 3rem hsla(0, 0%, 100%, 0.1)",
       },
+      animation: {
+        "spin-slow": "spin 200s linear infinite",
+      },
     },
   },
   plugins: [
