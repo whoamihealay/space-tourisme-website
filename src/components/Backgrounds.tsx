@@ -7,8 +7,6 @@ export const HomeBackgrounds = () => {
         <Image
           src={"/assets/home/background-home-mobile.jpg"}
           alt=""
-          width={375}
-          height={667}
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -43,8 +41,6 @@ export const DestinationBackgrounds = () => {
         <Image
           src={"/assets/destination/background-destination-mobile.jpg"}
           alt=""
-          width={375}
-          height={667}
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -79,8 +75,6 @@ export const CrewBackgrounds = () => {
         <Image
           src={"/assets/crew/background-crew-mobile.jpg"}
           alt=""
-          width={375}
-          height={667}
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -92,7 +86,7 @@ export const CrewBackgrounds = () => {
           alt=""
           layout="fill"
           objectFit="cover"
-          className="-z-[1]  "
+          className="-z-[1]"
         />
       </div>
       <div className="hidden desktop:block">
@@ -115,8 +109,6 @@ export const TechnologiesBackgrounds = () => {
         <Image
           src={"/assets/technology/background-technology-mobile.jpg"}
           alt=""
-          width={375}
-          height={667}
           layout="fill"
           objectFit="cover"
           className="-z-[1]"

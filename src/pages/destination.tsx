@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Planets from "../components/Planets";
@@ -6,6 +6,40 @@ import { DestinationBackgrounds } from "../components/Backgrounds";
 
 const Destination = () => {
   const [dest, setDest] = useState("Moon");
+  const [activeMoon, setActiveMoon] = useState("");
+  const [activeMars, setActiveMars] = useState("");
+  const [activeEuropa, setActiveEuropa] = useState("");
+  const [activeTitan, setActiveTitan] = useState("");
+
+  const resetActive = () => {
+    setActiveMoon("");
+    setActiveMars("");
+    setActiveEuropa("");
+    setActiveTitan("");
+  };
+
+  useEffect(() => {
+    switch (dest) {
+      case "Moon":
+        resetActive();
+        setActiveMoon("border-b-2 border-solid border-white text-white");
+        break;
+      case "Mars":
+        resetActive();
+        setActiveMars("border-b-2 border-solid border-white text-white");
+        break;
+      case "Europa":
+        resetActive();
+        setActiveEuropa("border-b-2 border-solid border-white text-white");
+        break;
+      case "Titan":
+        resetActive();
+        setActiveTitan("border-b-2 border-solid border-white text-white");
+        break;
+      default:
+        break;
+    }
+  }, [dest]);
 
   return (
     <div className="min-h-screen text-center">
@@ -26,25 +60,25 @@ const Destination = () => {
           </h1>
           <Planets dest={dest}>
             <button
-              className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeMoon}`}
               onClick={() => setDest("Moon")}
             >
               Moon
             </button>
             <button
-              className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2  hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeMars}`}
               onClick={() => setDest("Mars")}
             >
               Mars
             </button>
             <button
-              className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeEuropa}`}
               onClick={() => setDest("Europa")}
             >
               Europa
             </button>
             <button
-              className="font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white focus:border-0 focus:border-b-2 focus:border-solid focus:border-white focus:text-white"
+              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeTitan}`}
               onClick={() => setDest("Titan")}
             >
               Titan

@@ -49,3 +49,6 @@ jspm_packages
 *.xd
 .DS_Store
 .prettierignore
+
+#mics
+todo.txt

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center relative p-8 tablet:pl-8 desktop:py-8 desktop:pl-8 z-10">
+    <header className="flex justify-between items-center relative p-8 tablet:py-0 tablet:px-0 tablet:pl-8 desktop:py-8 desktop:pl-8 z-10">
       <Link href="/" passHref>
         <Image
           src="/assets/shared/logo.svg"
