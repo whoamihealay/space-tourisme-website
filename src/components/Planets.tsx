@@ -16,6 +16,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
   const [distance, setDistance] = useState("");
   const [travel, setTravel] = useState("");
 
+  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
   useEffect(() => {
     const getDestinations = () => {
       if (destinations != null) {

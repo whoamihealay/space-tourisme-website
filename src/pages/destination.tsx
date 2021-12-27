@@ -5,12 +5,16 @@ import Planets from "../components/Planets";
 import { DestinationBackgrounds } from "../components/Backgrounds";
 
 const Destination = () => {
+  // Data constant
   const [dest, setDest] = useState("Moon");
+
+  // Active link state
   const [activeMoon, setActiveMoon] = useState("");
   const [activeMars, setActiveMars] = useState("");
   const [activeEuropa, setActiveEuropa] = useState("");
   const [activeTitan, setActiveTitan] = useState("");
 
+  // Reset all active background effects on buttons
   const resetActive = () => {
     setActiveMoon("");
     setActiveMars("");
@@ -18,6 +22,7 @@ const Destination = () => {
     setActiveTitan("");
   };
 
+  // When destinations buttons are clicked, reset the styling then set the style of the active link
   useEffect(() => {
     switch (dest) {
       case "Moon":

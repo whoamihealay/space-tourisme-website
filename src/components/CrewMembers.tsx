@@ -15,6 +15,7 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
   const [role, setRole] = useState("");
   const [bio, setBio] = useState("");
 
+  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
   useEffect(() => {
     const getCrew = () => {
       if (crew != null) {

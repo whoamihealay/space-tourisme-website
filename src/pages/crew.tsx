@@ -13,6 +13,7 @@ const Crew = () => {
     "Anousheh Ansari",
   ];
 
+  // When button is clicked, add 1 to index to cycle trough the members array. If index is equal to last item index, reset to first item index.
   const changeMember = () => {
     if (index === members.length - 1) {
       setIndex(0);

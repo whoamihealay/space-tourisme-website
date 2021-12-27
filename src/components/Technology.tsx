@@ -15,6 +15,7 @@ const Technology = ({ tech, children }: TechProps) => {
   const [portrait, setPortrait] = useState("");
   const [description, setDescription] = useState("");
 
+  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
   useEffect(() => {
     const getTechnologies = () => {
       if (technolgies != null) {
