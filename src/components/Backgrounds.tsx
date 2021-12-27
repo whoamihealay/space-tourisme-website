@@ -6,7 +6,7 @@ export const HomeBackgrounds = () => {
       <div className="tablet:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/home/background-home-mobile.jpg"}
-          alt=""
+          alt="earth"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -15,7 +15,7 @@ export const HomeBackgrounds = () => {
       <div className="hidden tablet:block desktop:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/home/background-home-tablet.jpg"}
-          alt=""
+          alt="earth"
           layout="fill"
           objectFit="cover"
           className="-z-[1]  "
@@ -24,7 +24,7 @@ export const HomeBackgrounds = () => {
       <div className="hidden desktop:block bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/home/background-home-desktop.jpg"}
-          alt=""
+          alt="earth"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -40,7 +40,7 @@ export const DestinationBackgrounds = () => {
       <div className="tablet:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/destination/background-destination-mobile.jpg"}
-          alt=""
+          alt="stars"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -50,7 +50,7 @@ export const DestinationBackgrounds = () => {
         <div className="bg-dark -z-50 min-h-[100vw] fixed inset-0"></div>
         <Image
           src={"/assets/destination/background-destination-tablet.jpg"}
-          alt=""
+          alt="stars"
           layout="fill"
           objectFit="cover"
           className="-z-[1]  "
@@ -59,7 +59,7 @@ export const DestinationBackgrounds = () => {
       <div className="hidden desktop:block bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/destination/background-destination-desktop.jpg"}
-          alt=""
+          alt="stars"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -75,7 +75,7 @@ export const CrewBackgrounds = () => {
       <div className="tablet:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/crew/background-crew-mobile.jpg"}
-          alt=""
+          alt="sky"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -85,7 +85,7 @@ export const CrewBackgrounds = () => {
         <div className=""></div>
         <Image
           src={"/assets/crew/background-crew-tablet.jpg"}
-          alt=""
+          alt="sky"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -94,7 +94,7 @@ export const CrewBackgrounds = () => {
       <div className="hidden desktop:block bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/crew/background-crew-desktop.jpg"}
-          alt=""
+          alt="sky"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -110,7 +110,7 @@ export const TechnologiesBackgrounds = () => {
       <div className="tablet:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/technology/background-technology-mobile.jpg"}
-          alt=""
+          alt="galaxy"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
@@ -119,7 +119,7 @@ export const TechnologiesBackgrounds = () => {
       <div className="hidden tablet:block desktop:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/technology/background-technology-tablet.jpg"}
-          alt=""
+          alt="galaxy"
           layout="fill"
           objectFit="cover"
           className="-z-[1]  "
@@ -128,7 +128,7 @@ export const TechnologiesBackgrounds = () => {
       <div className="hidden desktop:block bg-dark -z-50 min-h-[100vw] fixed inset-0">
         <Image
           src={"/assets/technology/background-technology-desktop.jpg"}
-          alt=""
+          alt="galaxy"
           layout="fill"
           objectFit="cover"
           className="-z-[1]"
