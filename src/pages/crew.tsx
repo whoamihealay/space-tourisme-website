@@ -29,8 +29,8 @@ const Crew = () => {
       </Head>
       <CrewBackgrounds />
       <Layout>
-        <div className="px-4 mx-auto max-w-7xl">
-          <h1 className="font-sans text-lg tracking-widest uppercase text-accent tablet:pl-8 tablet:text-left pb-8">
+        <div>
+          <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 desktop:px-4 tracking-widest">
             <span
               className="text-lg opacity-25 px-2 font-bold"
               aria-hidden="true"

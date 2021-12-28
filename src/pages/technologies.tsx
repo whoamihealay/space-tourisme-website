@@ -42,8 +42,8 @@ const Technologies = () => {
       </Head>
       <TechnologiesBackgrounds />
       <Layout>
-        <div className="mx-auto max-w-7xl">
-          <h1 className="p-4 font-sans text-lg tracking-widest uppercase text-center text-white tablet:text-left tablet:p-0 tablet:pl-8 desktop:pl-O desktop:max-w-5xl desktop:mx-auto">
+        <div>
+          <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 desktop:px-4 tracking-widest">
             <span
               aria-hidden="true"
               className="text-lg opacity-25 px-2 font-bold"

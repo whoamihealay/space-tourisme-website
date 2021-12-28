@@ -37,7 +37,7 @@ const Planets = ({ dest, children }: PlanetsProps) => {
   }, [dest, destinations]);
 
   return (
-    <div className="flex flex-col items-center text-center desktop:flex-row desktop:justify-around desktop:text-left">
+    <div className="text-center desktop:text-left flex flex-col desktop:flex-row items-center desktop:justify-around desktop:gap-16">
       {image ? (
         <div className="max-w-[534px] min-w-[250px] w-1/2 p-8 animate-spin-slow">
           <Image
@@ -52,16 +52,16 @@ const Planets = ({ dest, children }: PlanetsProps) => {
       ) : (
         <div></div>
       )}
-      <article className="flex flex-col">
+      <article className="flex flex-col desktop:min-h-[27rem]">
         <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0 relative">
           {children}
         </div>
         <h2 className="font-serif text-3xl uppercase">{name}</h2>
-        <p className="p-4 text-accent text-center leading-8 max-w-[50ch] tablet:max-w-prose desktop:text-left">
+        <p className="p-4 text-accent text-center leading-8 max-w-[50ch] tablet:px-0 tablet:max-w-prose desktop:max-w-[45ch] desktop:text-left">
           {description}
         </p>
         <hr className="w-full opacity-30" />
-        <div className="infoFlex tablet:m-8 tablet:flex tablet:justify-center tablet:gap-12 desktop:my-4 desktop:justify-start">
+        <div className="infoFlex tablet:my-8 tablet:flex tablet:justify-center tablet:gap-12 desktop:my-4 desktop:justify-start">
           <div>
             <h3 className="font-sans text-base text-accent">AVG. DISTANCE</h3>
             <p className="font-serif text-2xl uppercase">{distance}</p>

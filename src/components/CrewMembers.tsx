@@ -35,7 +35,7 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
   }, [crew, crewSelect]);
 
   return (
-    <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-around">
+    <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-between">
       {image ? (
         <div className="max-w-[456px] mobile:w-3/5 tablet:w-3/4 contrast-[.85] desktop:w-full">
           <Image
