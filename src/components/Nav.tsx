@@ -40,13 +40,13 @@ const Nav = () => {
         setActiveHome("border-white mobile:border-l-4 tablet:border-b-4");
         break;
       case "/destination":
-        setActiveDest("border-white mobile:border-l-4  tablet:border-b-4");
+        setActiveDest("border-white mobile:border-l-4 tablet:border-b-4");
         break;
       case "/crew":
-        setActiveCrew("border-white mobile:border-l-4  tablet:border-b-4");
+        setActiveCrew("border-white mobile:border-l-4 tablet:border-b-4");
         break;
       case "/technologies":
-        setActiveTech("border-white mobile:border-l-4  tablet:border-b-4");
+        setActiveTech("border-white mobile:border-l-4 tablet:border-b-4");
         break;
       default:
         break;
@@ -82,7 +82,7 @@ const Nav = () => {
             </Link>
           </li>
           <li
-            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 border-white/30 border-solid py-4 ${activeDest}`}
+            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 hover:border-white/30 border-solid py-4 ${activeDest}`}
           >
             <Link href="/destination">
               <a className="text-white flex gap-2">
@@ -97,7 +97,7 @@ const Nav = () => {
             </Link>
           </li>
           <li
-            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 border-white/30 border-solid py-4 ${activeCrew}`}
+            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 hover:border-white/30 border-solid py-4 ${activeCrew}`}
           >
             <Link href="crew">
               <a className="text-white flex gap-2">
@@ -112,7 +112,7 @@ const Nav = () => {
             </Link>
           </li>
           <li
-            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 border-white/30 border-solid py-4 ${activeTech}`}
+            className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 hover:border-white/30 border-solid py-4 ${activeTech}`}
           >
             <Link href="/technologies">
               <a className="text-white flex gap-2">
