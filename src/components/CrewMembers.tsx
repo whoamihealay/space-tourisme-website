@@ -10,10 +10,12 @@ interface MembersProps {
 
 const CrewMembers = ({ crewSelect, children }: MembersProps) => {
   const crew = useData("crew");
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [role, setRole] = useState("");
-  const [bio, setBio] = useState("");
+  const [content, setContent] = useState({
+    name: "",
+    image: "",
+    role: "",
+    bio: "",
+  });
 
   // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
   useEffect(() => {
@@ -21,10 +23,12 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
       if (crew != null) {
         crew.map((data: CrewInterface) => {
           if (data.name === crewSelect) {
-            setName(data.name);
-            setImage(data.images.webp);
-            setRole(data.role);
-            setBio(data.bio);
+            setContent({
+              name: data.name,
+              image: data.images.webp,
+              role: data.role,
+              bio: data.bio,
+            });
           } else {
             return;
           }
@@ -36,11 +40,11 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
 
   return (
     <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-between">
-      {image ? (
+      {content.image ? (
         <div className="max-w-[456px] mobile:w-3/5 tablet:w-3/4 contrast-[.85] desktop:w-full">
           <Image
-            src={image}
-            alt={name}
+            src={content.image}
+            alt={content.name}
             width={456}
             height={572}
             objectFit="fill"
@@ -58,11 +62,13 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
         </div>
         <article className="flex flex-col">
           <p className="text-lg uppercase font-serif text-white/50 desktop:px-4">
-            {role}
+            {content.role}
           </p>
-          <h2 className="text-2xl uppercase font-serif desktop:px-4">{name}</h2>
+          <h2 className="text-2xl uppercase font-serif desktop:px-4">
+            {content.name}
+          </h2>
           <p className="p-4 text-accent text-center leading-8 desktop:text-left tablet:h-40 desktop:h-52 max-w-[50ch]">
-            {bio}
+            {content.bio}
           </p>
         </article>
       </div>

@@ -29,6 +29,7 @@ module.exports = {
         dark: "#0c0e18",
         accent: "#d2d8f9",
       },
+      gridAutoColumns: { "1fr": "1fr" },
       boxShadow: {
         explore: "0 0 0 3rem hsla(0, 0%, 100%, 0.1)",
       },

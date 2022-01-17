@@ -10,10 +10,12 @@ interface TechProps {
 
 const Technology = ({ tech, children }: TechProps) => {
   const technolgies = useData("technology");
-  const [name, setName] = useState("");
-  const [landscape, setLandscape] = useState("");
-  const [portrait, setPortrait] = useState("");
-  const [description, setDescription] = useState("");
+  const [content, setContent] = useState({
+    name: "",
+    landscape: "",
+    portrait: "",
+    description: "",
+  });
 
   // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
   useEffect(() => {
@@ -21,10 +23,12 @@ const Technology = ({ tech, children }: TechProps) => {
       if (technolgies != null) {
         technolgies.map((data: TechInterface) => {
           if (data.name === tech) {
-            setName(data.name);
-            setLandscape(data.images.landscape);
-            setPortrait(data.images.portrait);
-            setDescription(data.description);
+            setContent({
+              name: data.name,
+              landscape: data.images.landscape,
+              portrait: data.images.portrait,
+              description: data.description,
+            });
           }
         });
       }
@@ -34,20 +38,25 @@ const Technology = ({ tech, children }: TechProps) => {
 
   return (
     <div className="text-center desktop:text-left desktop:flex desktop:flex-row-reverse desktop:items-center">
-      {landscape && portrait ? (
+      {content.landscape && content.portrait ? (
         <div className="my-4">
           <div className="desktop:hidden">
             <Image
               objectFit="cover"
               layout="responsive"
-              src={landscape}
-              alt={name}
+              src={content.landscape}
+              alt={content.name}
               width={768}
               height={310}
             />
           </div>
           <div className="hidden desktop:block">
-            <Image src={portrait} alt={name} width={515} height={527} />
+            <Image
+              src={content.portrait}
+              alt={content.name}
+              width={515}
+              height={527}
+            />
           </div>
         </div>
       ) : (
@@ -61,9 +70,9 @@ const Technology = ({ tech, children }: TechProps) => {
           <p className="text-accent uppercase font-sans tracking-widest p-2">
             The terminology...
           </p>
-          <h2 className="text-2xl uppercase font-serif p-2">{name}</h2>
+          <h2 className="text-2xl uppercase font-serif p-2">{content.name}</h2>
           <p className="text-accent leading-7 px-4 max-w-[50ch] tablet:max-w-prose mx-auto">
-            {description}
+            {content.description}
           </p>
         </div>
       </div>
