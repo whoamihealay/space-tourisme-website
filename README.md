@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [space-tourism-website.healay.tk](https://space-tourism-website.healay.tk)
+- Solution URL: [frontendMentor.io](https://www.frontendmentor.io/solutions/next-space-tourism-w-typescript-and-tailwindcss-tbphK0jxa)
+- Live Site URL: [space-tourism-website.whoamiandrew.com/](https://space-tourism-website.whoamiandrew.com/)
 
 ## My process
 
