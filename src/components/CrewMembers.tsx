@@ -1,60 +1,23 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import useData from "../hooks/useData";
-import { CrewInterface } from "../types/dataTypes";
+import { CrewMember } from "../types";
 
 interface MembersProps {
-  crewSelect: string;
+  content: CrewMember;
   children?: React.ReactNode;
 }
 
-const CrewMembers = ({ crewSelect, children }: MembersProps) => {
-  const crew = useData("crew");
-  const [content, setContent] = useState({
-    name: "",
-    image: "",
-    role: "",
-    bio: "",
-  });
-
-  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
-  useEffect(() => {
-    const getCrew = () => {
-      if (crew != null) {
-        crew.map((data: CrewInterface) => {
-          if (data.name === crewSelect) {
-            setContent({
-              name: data.name,
-              image: data.images.webp,
-              role: data.role,
-              bio: data.bio,
-            });
-          } else {
-            return;
-          }
-        });
-      }
-    };
-    getCrew();
-  }, [crew, crewSelect]);
-
+const CrewMember = ({ content, children }: MembersProps) => {
   return (
     <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-between">
-      {content.image ? (
         <div className="max-w-[456px] mobile:w-3/5 tablet:w-3/4 contrast-[.85] desktop:w-full">
           <Image
-            src={content.image}
+            src={content?.images.webp}
             alt={content.name}
             width={456}
             height={572}
-            objectFit="fill"
-            layout="responsive"
           />
           <hr className="hidden tablet:block opacity-10" />
         </div>
-      ) : (
-        <div></div>
-      )}
       <hr className="w-full opacity-10 tablet:hidden" />
       <div className="tablet:flex tablet:flex-col-reverse">
         <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 desktop:mx-0 relative">
@@ -76,4 +39,4 @@ const CrewMembers = ({ crewSelect, children }: MembersProps) => {
   );
 };
 
-export default CrewMembers;
+export default CrewMember;
