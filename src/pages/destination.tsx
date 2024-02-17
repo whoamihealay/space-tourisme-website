@@ -3,48 +3,13 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Planets from "../components/Planets";
 import { DestinationBackgrounds } from "../components/Backgrounds";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { destinations } from "../data/data.json";
 
-const Destination = () => {
+const Destination = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
   // Data constant
-  const [dest, setDest] = useState("Moon");
-
-  // Active link state
-  const [activeMoon, setActiveMoon] = useState("");
-  const [activeMars, setActiveMars] = useState("");
-  const [activeEuropa, setActiveEuropa] = useState("");
-  const [activeTitan, setActiveTitan] = useState("");
-
-  // Reset all active background effects on buttons
-  const resetActive = () => {
-    setActiveMoon("");
-    setActiveMars("");
-    setActiveEuropa("");
-    setActiveTitan("");
-  };
-
-  // When destinations buttons are clicked, reset the styling then set the style of the active link
-  useEffect(() => {
-    switch (dest) {
-      case "Moon":
-        resetActive();
-        setActiveMoon("border-b-2 border-solid border-white text-white");
-        break;
-      case "Mars":
-        resetActive();
-        setActiveMars("border-b-2 border-solid border-white text-white");
-        break;
-      case "Europa":
-        resetActive();
-        setActiveEuropa("border-b-2 border-solid border-white text-white");
-        break;
-      case "Titan":
-        resetActive();
-        setActiveTitan("border-b-2 border-solid border-white text-white");
-        break;
-      default:
-        break;
-    }
-  }, [dest]);
+  const [active, setActive] = useState(0);
+  const activeStyles = "border-b-2 border-solid border-white text-white";
 
   return (
     <div className="min-h-screen text-center">
@@ -63,36 +28,28 @@ const Destination = () => {
             </span>{" "}
             Pick your destination
           </h1>
-          <Planets dest={dest}>
-            <button
-              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeMoon}`}
-              onClick={() => setDest("Moon")}
+          <Planets content={data?.[active]}>
+            {data?.map((item, index) => (
+              <button
+              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${index === active ? activeStyles : ""}`}
+              onClick={() => setActive(index)}
             >
-              Moon
+              {item.name}
             </button>
-            <button
-              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeMars}`}
-              onClick={() => setDest("Mars")}
-            >
-              Mars
-            </button>
-            <button
-              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeEuropa}`}
-              onClick={() => setDest("Europa")}
-            >
-              Europa
-            </button>
-            <button
-              className={`font-sans h-10 text-accent uppercase cursor-pointer hover:border-0 hover:border-b-2 hover:border-solid hover:border-white hover:text-white ${activeTitan}`}
-              onClick={() => setDest("Titan")}
-            >
-              Titan
-            </button>
+            ))}
           </Planets>
         </div>
       </Layout>
     </div>
   );
 };
+
+export const getStaticProps = (() => {
+  return {
+    props: {
+      data: destinations
+    },
+  };
+  }) satisfies GetStaticProps;
 
 export default Destination;

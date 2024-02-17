@@ -1,39 +1,18 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TechnologiesBackgrounds } from "../components/Backgrounds";
 import Layout from "../components/Layout";
+import type { InferGetStaticPropsType, GetStaticProps } from "next";
+import { technology } from "../data/data.json";
 import Technology from "../components/Technology";
 
-const Technologies = () => {
-  const [tech, setTech] = useState("Launch vehicle");
-  const [activeOne, setActiveOne] = useState("");
-  const [activeTwo, setActiveTwo] = useState("");
-  const [activeThree, setActiveThree] = useState("");
 
-  const resetActive = () => {
-    setActiveOne("");
-    setActiveTwo("");
-    setActiveThree("");
-  };
 
-  useEffect(() => {
-    switch (tech) {
-      case "Launch vehicle":
-        resetActive();
-        setActiveOne("bg-white text-black");
-        break;
-      case "Spaceport":
-        resetActive();
-        setActiveTwo("bg-white text-black");
-        break;
-      case "Space capsule":
-        resetActive();
-        setActiveThree("bg-white text-black");
-        break;
-      default:
-        break;
-    }
-  }, [tech]);
+const Technologies = ({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [active, setActive] = useState(0);
+  const activeStyles = "bg-white text-black";
 
   return (
     <div>
@@ -52,30 +31,29 @@ const Technologies = () => {
             </span>{" "}
             Space Launch 101
           </h1>
-          <Technology tech={tech}>
-            <button
-              className={`w-10 h-10 tablet:w-16 tablet:h-16 desktop:w-20 desktop:h-20 border-2 border-solid border-white/30 rounded-full font-serif hover:bg-white hover:text-black ${activeOne}`}
-              onClick={() => setTech("Launch vehicle")}
+          <Technology content={data?.[active]}>
+            {data?.map((item, index) => (
+              <button
+              key={item.name}
+              className={`w-10 h-10 tablet:w-16 tablet:h-16 desktop:w-20 desktop:h-20 border-2 border-solid border-white/30 rounded-full font-serif hover:bg-white hover:text-black ${index === active ? activeStyles : ""}`}
+              onClick={() => setActive(index)}
             >
-              1
+              {index + 1}
             </button>
-            <button
-              className={`w-10 h-10 tablet:w-16 tablet:h-16 desktop:w-20 desktop:h-20 border-2 border-solid border-white/30 rounded-full font-serif hover:bg-white hover:text-black ${activeTwo}`}
-              onClick={() => setTech("Spaceport")}
-            >
-              2
-            </button>
-            <button
-              className={`w-10 h-10 tablet:w-16 tablet:h-16 desktop:w-20 desktop:h-20 border-2 border-solid border-white/30 rounded-full font-serif hover:bg-white hover:text-black ${activeThree}`}
-              onClick={() => setTech("Space capsule")}
-            >
-              3
-            </button>
+            ))}
           </Technology>
         </div>
       </Layout>
     </div>
   );
 };
+
+export const getStaticProps = (() => {
+  return {
+    props: {
+      data: technology,
+    },
+  };
+}) satisfies GetStaticProps;
 
 export default Technologies;

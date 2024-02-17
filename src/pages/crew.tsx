@@ -1,11 +1,13 @@
 import Head from "next/head";
 import { useState } from "react";
 import { CrewBackgrounds } from "../components/Backgrounds";
-import CrewMembers from "../components/CrewMembers";
+import CrewMember from "../components/CrewMembers";
 import Layout from "../components/Layout";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { crew } from "../data/data.json";
 
-const Crew = () => {
-  const [index, setIndex] = useState(0);
+const Crew = ({data}: InferGetStaticPropsType<typeof getStaticProps> ) => {
+  const [active, setActive] = useState(0);
   const members = [
     "Douglas Hurley",
     "Mark Shuttleworth",
@@ -15,10 +17,10 @@ const Crew = () => {
 
   // When button is clicked, add 1 to index to cycle trough the members array. If index is equal to last item index, reset to first item index.
   const changeMember = () => {
-    if (index === members.length - 1) {
-      setIndex(0);
+    if (active === members.length - 1) {
+      setActive(0);
     } else {
-      setIndex(index + 1);
+      setActive(active + 1);
     }
   };
 
@@ -39,34 +41,32 @@ const Crew = () => {
             </span>{" "}
             Meet your crew
           </h1>
-          <CrewMembers crewSelect={members[index]}>
+          <CrewMember content={data[active]}>
             <button
               onClick={changeMember}
               className={`flex gap-4 p-4 even:bg-accent/100`}
             >
-              <div
-                id={`active-${index}`}
+              {data?.map((_) => (
+                <div
+                id={`active-${active}`}
                 className="h-2 w-2 rounded-full bg-accent opacity-30 desktop:h-4 desktop:w-4"
               ></div>
-              <div
-                id={`active-${index}`}
-                className="h-2 w-2 rounded-full bg-accent opacity-30 desktop:h-4 desktop:w-4"
-              ></div>
-              <div
-                id={`active-${index}`}
-                className="h-2 w-2 rounded-full bg-accent opacity-30 desktop:h-4 desktop:w-4"
-              ></div>
-              <div
-                id={`active-${index}`}
-                className="h-2 w-2 rounded-full bg-accent opacity-30 desktop:h-4 desktop:w-4"
-              ></div>
+              ))}
               <span className="sr-only">change crew member</span>
             </button>
-          </CrewMembers>
+          </CrewMember>
         </div>
       </Layout>
     </div>
   );
 };
+
+export const getStaticProps = (() => {
+  return {
+    props: {
+      data: crew
+    },
+  };
+}) satisfies GetStaticProps;
 
 export default Crew;

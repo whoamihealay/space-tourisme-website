@@ -1,50 +1,21 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import useData from "../hooks/useData";
-import { TechInterface } from "../types/dataTypes";
+import { TechnologyType } from "../types";
 
 interface TechProps {
-  tech: string;
+  content: TechnologyType;
   children: React.ReactNode;
 }
 
-const Technology = ({ tech, children }: TechProps) => {
-  const technolgies = useData("technology");
-  const [content, setContent] = useState({
-    name: "",
-    landscape: "",
-    portrait: "",
-    description: "",
-  });
-
-  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
-  useEffect(() => {
-    const getTechnologies = () => {
-      if (technolgies != null) {
-        technolgies.map((data: TechInterface) => {
-          if (data.name === tech) {
-            setContent({
-              name: data.name,
-              landscape: data.images.landscape,
-              portrait: data.images.portrait,
-              description: data.description,
-            });
-          }
-        });
-      }
-    };
-    getTechnologies();
-  }, [tech, technolgies]);
-
+const Technology = ({ content, children }: TechProps) => {
   return (
     <div className="text-center desktop:text-left desktop:flex desktop:flex-row-reverse desktop:items-center">
-      {content.landscape && content.portrait ? (
+      {content.images.landscape && content.images.portrait && (
         <div className="my-4">
           <div className="desktop:hidden">
             <Image
               objectFit="cover"
               layout="responsive"
-              src={content.landscape}
+              src={content.images.landscape}
               alt={content.name}
               width={768}
               height={310}
@@ -52,15 +23,13 @@ const Technology = ({ tech, children }: TechProps) => {
           </div>
           <div className="hidden desktop:block">
             <Image
-              src={content.portrait}
+              src={content.images.portrait}
               alt={content.name}
               width={515}
               height={527}
             />
           </div>
         </div>
-      ) : (
-        <div></div>
       )}
       <div className="desktop:flex">
         <div className="flex desktop:flex-col gap-4 justify-center px-4 pt-4 pb-2 relative">

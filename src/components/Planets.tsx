@@ -1,53 +1,18 @@
-import React, { useEffect, useState } from "react";
-import useData from "../hooks/useData";
+import React from "react";
 import Image from "next/image";
-import { DestInterface } from "../types/dataTypes";
-
+import { PlanetType } from "../types";
 interface PlanetsProps {
-  dest: string;
+  content: PlanetType;
   children: React.ReactNode;
 }
 
-const Planets = ({ dest, children }: PlanetsProps) => {
-  const destinations = useData("destinations");
-  const [content, setContent] = useState({
-    name: "",
-    image: "",
-    description: "",
-    distance: "",
-    travel: "",
-  });
-
-  // When useData hook is completed, map through the fetched data and match the passed prop. Redo when prop changes.
-  useEffect(() => {
-    const getDestinations = () => {
-      if (destinations != null) {
-        destinations.map((data: DestInterface) => {
-          if (data.name === dest) {
-            setContent({
-              name: data.name,
-              image: data.images.webp,
-              description: data.description,
-              distance: data.distance,
-              travel: data.travel,
-            });
-          } else {
-            return;
-          }
-        });
-      }
-    };
-    getDestinations();
-  }, [dest, destinations]);
-
-  // desktop:flex-row desktop:justify-around desktop:gap-16
-
+const Planets = ({ content, children }: PlanetsProps) => {
   return (
     <div className="text-center desktop:text-left flex flex-col items-center desktop:items-start desktop:flex-row desktop:justify-around desktop:gap-16">
-      {content.image ? (
+      {content.images && (
         <div className="min-w-[250px] w-1/2 p-8 animate-spin-slow desktop:w-full">
           <Image
-            src={content.image}
+            src={content.images.webp}
             alt={content.name}
             width={534}
             height={534}
@@ -55,8 +20,6 @@ const Planets = ({ dest, children }: PlanetsProps) => {
             layout="responsive"
           />
         </div>
-      ) : (
-        <div></div>
       )}
       <article className="flex flex-col desktop:min-h-[27rem] desktop:w-full">
         <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0 relative">
