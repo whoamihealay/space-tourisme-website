@@ -5,10 +5,11 @@ import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import Background from "@/components/background";
 import Layout from "@/components/Layout";
 import Technology from "@/components/Technology";
-import { technology } from "@/data/data.json";
+import { technology, navigation } from "@/data/data.json";
 
 const Technologies = ({
   data,
+  layout,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [active, setActive] = useState(0);
   const activeStyles = "bg-white text-black";
@@ -19,7 +20,7 @@ const Technologies = ({
         <title>{data?.page?.title} | Frontend Mentor</title>
       </Head>
       <Background data={data?.page?.background} />
-      <Layout>
+      <Layout data={layout}>
         <div>
           <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 desktop:px-4 tracking-widest">
             <span
@@ -51,6 +52,9 @@ export const getStaticProps = (() => {
   return {
     props: {
       data: technology,
+      layout: {
+        navigation: navigation,
+      },
     },
   };
 }) satisfies GetStaticProps;

@@ -1,4 +1,28 @@
 {
+  "navigation": {
+    "menu": [
+      {
+        "prefix": "00",
+        "name": "Home",
+        "link": "/"
+      },
+      {
+        "prefix": "01",
+        "name": "Destinations",
+        "link": "/destinations"
+      },
+      {
+        "prefix": "02",
+        "name": "Crew",
+        "link": "/crew"
+      },
+      {
+        "prefix": "03",
+        "name": "Technology",
+        "link": "/technologies"
+      }
+    ]
+  },
   "home": {
     "page": {
       "title": "Space tourism",

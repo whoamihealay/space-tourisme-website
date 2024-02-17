@@ -5,10 +5,11 @@ import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import Layout from "@/components/Layout";
 import Planets from "@/components/Planets";
 import Background from "@/components/background";
-import { destinations } from "@/data/data.json";
+import { destinations, navigation } from "@/data/data.json";
 
 const Destination = ({
   data,
+  layout,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [active, setActive] = useState(0);
   const activeStyles = "border-b-2 border-solid border-white text-white";
@@ -19,7 +20,7 @@ const Destination = ({
         <title>{data?.page?.title} | Frontend Mentor</title>
       </Head>
       <Background data={data?.page?.background} />
-      <Layout>
+      <Layout data={layout}>
         <div>
           <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 tracking-widest">
             <span
@@ -51,6 +52,9 @@ export const getStaticProps = (() => {
   return {
     props: {
       data: destinations,
+      layout: {
+        navigation: navigation,
+      },
     },
   };
 }) satisfies GetStaticProps;

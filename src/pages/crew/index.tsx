@@ -2,11 +2,14 @@ import { useState } from "react";
 import Head from "next/head";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import Background from "@/components/background";
-import CrewMember from "@/components/CrewMembers";
 import Layout from "@/components/Layout";
-import { crew } from "@/data/data.json";
+import { crew, navigation } from "@/data/data.json";
+import CrewMember from "@/components/CrewMember";
 
-const Crew = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Crew = ({
+  data,
+  layout,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [active, setActive] = useState(0);
 
   // When button is clicked, add 1 to index to cycle trough the members array. If index is equal to last item index, reset to first item index.
@@ -24,7 +27,7 @@ const Crew = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <title>{data?.page?.title} | Frontend Mentor</title>
       </Head>
       <Background data={data?.page?.background} />
-      <Layout>
+      <Layout data={layout}>
         <div>
           <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 desktop:px-4 tracking-widest">
             <span
@@ -60,6 +63,9 @@ export const getStaticProps = (() => {
   return {
     props: {
       data: crew,
+      layout: {
+        navigation: navigation,
+      },
     },
   };
 }) satisfies GetStaticProps;
