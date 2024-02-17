@@ -16,8 +16,6 @@ const Planets = ({ content, children }: PlanetsProps) => {
             alt={content.name}
             width={534}
             height={534}
-            objectFit="cover"
-            layout="responsive"
           />
         </div>
       )}

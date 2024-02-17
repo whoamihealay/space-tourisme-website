@@ -13,8 +13,6 @@ const Technology = ({ content, children }: TechProps) => {
         <div className="my-4">
           <div className="desktop:hidden">
             <Image
-              objectFit="cover"
-              layout="responsive"
               src={content.images.landscape}
               alt={content.name}
               width={768}

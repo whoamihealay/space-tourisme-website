@@ -17,7 +17,6 @@ const Button = ({ toggle }: ButtonInterface) => {
         alt="hamburger"
         height={24}
         width={24}
-        layout="fixed"
         className="fill-white"
       />
       <span className="sr-only">Menu</span>

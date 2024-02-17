@@ -15,8 +15,6 @@ const CrewMember = ({ content, children }: MembersProps) => {
             alt={content.name}
             width={456}
             height={572}
-            objectFit="fill"
-            layout="responsive"
           />
           <hr className="hidden tablet:block opacity-10" />
         </div>
