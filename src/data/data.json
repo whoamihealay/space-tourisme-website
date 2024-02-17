@@ -1,108 +1,215 @@
 {
-  "destinations": [
-    {
-      "name": "Moon",
-      "images": {
-        "png": "/assets/destination/image-moon.png",
-        "webp": "/assets/destination/image-moon.webp"
+  "navigation": {
+    "menu": [
+      {
+        "prefix": "00",
+        "name": "Home",
+        "link": "/"
       },
-      "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-      "distance": "384,400 km",
-      "travel": "3 days"
+      {
+        "prefix": "01",
+        "name": "Destinations",
+        "link": "/destinations"
+      },
+      {
+        "prefix": "02",
+        "name": "Crew",
+        "link": "/crew"
+      },
+      {
+        "prefix": "03",
+        "name": "Technology",
+        "link": "/technologies"
+      }
+    ]
+  },
+  "home": {
+    "page": {
+      "title": "Space tourism",
+      "background": {
+        "desktop": {
+          "src": "/assets/backgrounds/background-home-desktop.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAEQMEITFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhEDEQA/AMDo5Di20YC7sEeiVygdhbjk9VES2Qr/2Q=="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-home-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQUH/8QAIhABAAECBAcAAAAAAAAAAAAAAQACIQMFERIUMVFSU5Gi/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAwDAQACEQMRAD8AzkF5Cx21dr6lQzDES9NOnQtDj3x/UtAU/9k="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-home-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAASAAoDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBQf/xAAjEAEAAQIDCQAAAAAAAAAAAAABAAIDBAUiERIVMUFTcoKS/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABcRAQADAAAAAAAAAAAAAAAAAAABAhL/2gAMAwEAAhEDEQA/AM5hLMykDVi7fqbZHhtHffma5lOoNK69411cnrGmIvgBeuB5MIQsVX//2Q=="
+        },
+        "alt": "earth"
+      }
     },
-    {
-      "name": "Mars",
-      "images": {
-        "png": "/assets/destination/image-mars.png",
-        "webp": "/assets/destination/image-mars.webp"
-      },
-      "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
-      "distance": "225 mil. km",
-      "travel": "9 months"
-    },
-    {
-      "name": "Europa",
-      "images": {
-        "png": "/assets/destination/image-europa.png",
-        "webp": "/assets/destination/image-europa.webp"
-      },
-      "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-      "distance": "628 mil. km",
-      "travel": "3 years"
-    },
-    {
-      "name": "Titan",
-      "images": {
-        "png": "/assets/destination/image-titan.png",
-        "webp": "/assets/destination/image-titan.webp"
-      },
-      "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-      "distance": "1.6 bil. km",
-      "travel": "7 years"
+    "content": {
+      "description": "Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!"
     }
-  ],
-  "crew": [
-    {
-      "name": "Douglas Hurley",
-      "images": {
-        "png": "/assets/crew/image-douglas-hurley.png",
-        "webp": "/assets/crew/image-douglas-hurley.webp"
-      },
-      "role": "Commander",
-      "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+  },
+  "destinations": {
+    "page": {
+      "title": "Destinations",
+      "background": {
+        "desktop": {
+          "src": "/assets/backgrounds/background-destination-desktop.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAECAxH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM7nRzPESAWH/9k="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-destination-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EABoQAAICAwAAAAAAAAAAAAAAAAABAgMTIVL/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzytpPY/JHpkoDF//2Q=="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-destination-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAXAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDB//EABsQAQEAAQUAAAAAAAAAAAAAAAABIQIREjFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzvRM9rY9Ql2NzrRJAAC//9k="
+        },
+        "alt": "stars"
+      }
     },
-    {
-      "name": "Mark Shuttleworth",
-      "images": {
-        "png": "/assets/crew/image-mark-shuttleworth.png",
-        "webp": "/assets/crew/image-mark-shuttleworth.webp"
+    "content": [
+      {
+        "name": "Moon",
+        "images": {
+          "png": "/assets/destination/image-moon.png",
+          "webp": "/assets/destination/image-moon.webp"
+        },
+        "description": "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
+        "distance": "384,400 km",
+        "travel": "3 days"
       },
-      "role": "Mission Specialist",
-      "bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+      {
+        "name": "Mars",
+        "images": {
+          "png": "/assets/destination/image-mars.png",
+          "webp": "/assets/destination/image-mars.webp"
+        },
+        "description": "Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!",
+        "distance": "225 mil. km",
+        "travel": "9 months"
+      },
+      {
+        "name": "Europa",
+        "images": {
+          "png": "/assets/destination/image-europa.png",
+          "webp": "/assets/destination/image-europa.webp"
+        },
+        "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
+        "distance": "628 mil. km",
+        "travel": "3 years"
+      },
+      {
+        "name": "Titan",
+        "images": {
+          "png": "/assets/destination/image-titan.png",
+          "webp": "/assets/destination/image-titan.webp"
+        },
+        "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
+        "distance": "1.6 bil. km",
+        "travel": "7 years"
+      }
+    ]
+  },
+  "crew": {
+    "page": {
+      "title": "Crew",
+      "background": {
+        "desktop": {
+          "src": "/assets/backgrounds/background-crew-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECAxQhUVOR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDARvglut74kVlLrXoBYf/Z"
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-crew-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQQG/8QAHhAAAQMEAwAAAAAAAAAAAAAAAQACAxESMZETU2H/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMOInltrxcPUiE0ydKMSyjEj9o5JOx21Yf/Z"
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-crew-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAATAAoDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAb/xAAgEAACAgIABwAAAAAAAAAAAAAAAQIRBBIDFCFBUYGR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AwvScNZpxb7inwadasesjHu6mvRHMY/iXw2ikAAB//9k="
+        },
+        "alt": "sky"
+      }
     },
-    {
-      "name": "Victor Glover",
-      "images": {
-        "png": "/assets/crew/image-victor-glover.png",
-        "webp": "/assets/crew/image-victor-glover.webp"
+    "content": [
+      {
+        "name": "Douglas Hurley",
+        "images": {
+          "png": "/assets/crew/image-douglas-hurley.png",
+          "webp": "/assets/crew/image-douglas-hurley.webp"
+        },
+        "role": "Commander",
+        "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
       },
-      "role": "Pilot",
-      "bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+      {
+        "name": "Mark Shuttleworth",
+        "images": {
+          "png": "/assets/crew/image-mark-shuttleworth.png",
+          "webp": "/assets/crew/image-mark-shuttleworth.webp"
+        },
+        "role": "Mission Specialist",
+        "bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+      },
+      {
+        "name": "Victor Glover",
+        "images": {
+          "png": "/assets/crew/image-victor-glover.png",
+          "webp": "/assets/crew/image-victor-glover.webp"
+        },
+        "role": "Pilot",
+        "bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+      },
+      {
+        "name": "Anousheh Ansari",
+        "images": {
+          "png": "/assets/crew/image-anousheh-ansari.png",
+          "webp": "/assets/crew/image-anousheh-ansari.webp"
+        },
+        "role": "Flight Engineer",
+        "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
+      }
+    ]
+  },
+  "technology": {
+    "page": {
+      "title": "Technologies",
+      "background": {
+        "desktop": {
+          "src": "/assets/backgrounds/background-technology-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAGBABAQADAAAAAAAAAAAAAAAAAAEREmH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM6kyrToKB//2Q=="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-technology-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEv/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AM5ByKzFIH//2Q=="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-technology-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAATAAoDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM5BLYIvkAp//9k="
+        },
+        "alt": "galaxy"
+      }
     },
-    {
-      "name": "Anousheh Ansari",
-      "images": {
-        "png": "/assets/crew/image-anousheh-ansari.png",
-        "webp": "/assets/crew/image-anousheh-ansari.webp"
+    "content": [
+      {
+        "name": "Launch vehicle",
+        "images": {
+          "portrait": "/assets/technology/image-launch-vehicle-portrait.jpg",
+          "landscape": "/assets/technology/image-launch-vehicle-landscape.jpg"
+        },
+        "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
       },
-      "role": "Flight Engineer",
-      "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
-    }
-  ],
-  "technology": [
-    {
-      "name": "Launch vehicle",
-      "images": {
-        "portrait": "/assets/technology/image-launch-vehicle-portrait.jpg",
-        "landscape": "/assets/technology/image-launch-vehicle-landscape.jpg"
+      {
+        "name": "Spaceport",
+        "images": {
+          "portrait": "/assets/technology/image-spaceport-portrait.jpg",
+          "landscape": "/assets/technology/image-spaceport-landscape.jpg"
+        },
+        "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch."
       },
-      "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
-    },
-    {
-      "name": "Spaceport",
-      "images": {
-        "portrait": "/assets/technology/image-spaceport-portrait.jpg",
-        "landscape": "/assets/technology/image-spaceport-landscape.jpg"
-      },
-      "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
-    },
-    {
-      "name": "Space capsule",
-      "images": {
-        "portrait": "/assets/technology/image-space-capsule-portrait.jpg",
-        "landscape": "/assets/technology/image-space-capsule-landscape.jpg"
-      },
-      "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
-    }
-  ]
+      {
+        "name": "Space capsule",
+        "images": {
+          "portrait": "/assets/technology/image-space-capsule-portrait.jpg",
+          "landscape": "/assets/technology/image-space-capsule-landscape.jpg"
+        },
+        "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+      }
+    ]
+  }
 }

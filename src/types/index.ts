@@ -9,15 +9,15 @@ export type PlanetType = {
   travel: string;
 };
 
-export type CrewMember = {
+export type CrewMemberType = {
   name: string;
-      images: {
-        png: string;
-        webp: string;
-      };
-      role: string;
-      bio: string;
-}
+  images: {
+    png: string;
+    webp: string;
+  };
+  role: string;
+  bio: string;
+};
 
 export type TechnologyType = {
   name: string;
@@ -26,4 +26,30 @@ export type TechnologyType = {
     landscape: string;
   };
   description: string;
+};
+
+export type BackgroundType = {
+  desktop: {
+    src: string;
+    blur: string;
+  };
+  tablet: {
+    src: string;
+    blur: string;
+  };
+  mobile: {
+    src: string;
+    blur: string;
+  };
+  alt: string;
+};
+
+export type NavigationType = {
+  menu: NavigationLinkType[];
+};
+
+export type NavigationLinkType = {
+  prefix: string;
+  name: string;
+  link: string;
 };
