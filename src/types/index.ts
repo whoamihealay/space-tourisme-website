@@ -27,3 +27,10 @@ export type TechnologyType = {
   };
   description: string;
 };
+
+export type BackgroundType = {
+  desktop: string;
+  tablet: string;
+  mobile: string;
+  alt: string;
+};
