@@ -1,7 +1,11 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children }: JSX.ElementChildrenAttribute) => {
+interface IProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: IProps) => {
   return (
     <>
       <Header />
