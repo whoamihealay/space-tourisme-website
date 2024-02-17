@@ -29,9 +29,18 @@ export type TechnologyType = {
 };
 
 export type BackgroundType = {
-  desktop: string;
-  tablet: string;
-  mobile: string;
+  desktop: {
+    src: string;
+    blur: string;
+  };
+  tablet: {
+    src: string;
+    blur: string;
+  };
+  mobile: {
+    src: string;
+    blur: string;
+  };
   alt: string;
 };
 

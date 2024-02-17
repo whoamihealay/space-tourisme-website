@@ -27,9 +27,18 @@
     "page": {
       "title": "Space tourism",
       "background": {
-        "desktop": "/assets/backgrounds/background-home-desktop.jpg",
-        "tablet": "/assets/backgrounds/background-home-tablet.jpg",
-        "mobile": "/assets/backgrounds/background-home-mobile.jpg",
+        "desktop": {
+          "src": "/assets/backgrounds/background-home-desktop.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAEQMEITFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhEDEQA/AMDo5Di20YC7sEeiVygdhbjk9VES2Qr/2Q=="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-home-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQUH/8QAIhABAAECBAcAAAAAAAAAAAAAAQACIQMFERIUMVFSU5Gi/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAwDAQACEQMRAD8AzkF5Cx21dr6lQzDES9NOnQtDj3x/UtAU/9k="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-home-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAASAAoDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBQf/xAAjEAEAAQIDCQAAAAAAAAAAAAABAAIDBAUiERIVMUFTcoKS/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABcRAQADAAAAAAAAAAAAAAAAAAABAhL/2gAMAwEAAhEDEQA/AM5hLMykDVi7fqbZHhtHffma5lOoNK69411cnrGmIvgBeuB5MIQsVX//2Q=="
+        },
         "alt": "earth"
       }
     },
@@ -41,9 +50,18 @@
     "page": {
       "title": "Destinations",
       "background": {
-        "desktop": "/assets/backgrounds/background-destination-desktop.jpg",
-        "tablet": "/assets/backgrounds/background-destination-tablet.jpg",
-        "mobile": "/assets/backgrounds/background-destination-mobile.jpg",
+        "desktop": {
+          "src": "/assets/backgrounds/background-destination-desktop.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAECAxH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM7nRzPESAWH/9k="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-destination-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EABoQAAICAwAAAAAAAAAAAAAAAAABAgMTIVL/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzytpPY/JHpkoDF//2Q=="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-destination-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAXAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDB//EABsQAQEAAQUAAAAAAAAAAAAAAAABIQIREjFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzvRM9rY9Ql2NzrRJAAC//9k="
+        },
         "alt": "stars"
       }
     },
@@ -94,9 +112,18 @@
     "page": {
       "title": "Crew",
       "background": {
-        "desktop": "/assets/backgrounds/background-crew-mobile.jpg",
-        "tablet": "/assets/backgrounds/background-crew-tablet.jpg",
-        "mobile": "/assets/backgrounds/background-crew-mobile.jpg",
+        "desktop": {
+          "src": "/assets/backgrounds/background-crew-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECAxQhUVOR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDARvglut74kVlLrXoBYf/Z"
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-crew-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQQG/8QAHhAAAQMEAwAAAAAAAAAAAAAAAQACAxESMZETU2H/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMOInltrxcPUiE0ydKMSyjEj9o5JOx21Yf/Z"
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-crew-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAATAAoDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAb/xAAgEAACAgIABwAAAAAAAAAAAAAAAQIRBBIDFCFBUYGR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AwvScNZpxb7inwadasesjHu6mvRHMY/iXw2ikAAB//9k="
+        },
         "alt": "sky"
       }
     },
@@ -143,9 +170,18 @@
     "page": {
       "title": "Technologies",
       "background": {
-        "desktop": "/assets/backgrounds/background-technology-mobile.jpg",
-        "tablet": "/assets/backgrounds/background-technology-tablet.jpg",
-        "mobile": "/assets/backgrounds/background-technology-mobile.jpg",
+        "desktop": {
+          "src": "/assets/backgrounds/background-technology-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAGBABAQADAAAAAAAAAAAAAAAAAAEREmH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM6kyrToKB//2Q=="
+        },
+        "tablet": {
+          "src": "/assets/backgrounds/background-technology-tablet.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAANAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEv/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AM5ByKzFIH//2Q=="
+        },
+        "mobile": {
+          "src": "/assets/backgrounds/background-technology-mobile.jpg",
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAATAAoDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM5BLYIvkAp//9k="
+        },
         "alt": "galaxy"
       }
     },

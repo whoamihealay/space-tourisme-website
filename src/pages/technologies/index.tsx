@@ -17,7 +17,7 @@ const Technologies = ({
   return (
     <div>
       <Head>
-        <title>{data?.page?.title} | Frontend Mentor</title>
+        <title>{`${data?.page?.title} | Frontend Mentor`}</title>
       </Head>
       <Background data={data?.page?.background} />
       <Layout data={layout}>
