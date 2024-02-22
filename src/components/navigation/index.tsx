@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import NavigationLink from "./NavigationLink";
 import { NavigationLinkType } from "@/types/index";
@@ -7,7 +9,7 @@ interface INavigation {
   menu?: NavigationLinkType[];
 }
 
-const Navigation = ({ menu }: INavigation) => {
+export default function Index({ menu }: INavigation) {
   // "mobile:" is needed as mobile:${menu} doesn't compile for tailwind.
   const [showMenu, setShowMenu] = useState("mobile:hidden");
 
@@ -36,6 +38,4 @@ const Navigation = ({ menu }: INavigation) => {
       </nav>
     </>
   );
-};
-
-export default Navigation;
+}

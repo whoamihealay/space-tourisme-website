@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { PlanetType } from "../types";
+import { PlanetType } from "../../../types";
 interface PlanetsProps {
   content: PlanetType;
   children: React.ReactNode;

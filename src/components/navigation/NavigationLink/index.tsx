@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 interface INavigationLink {
@@ -8,10 +8,10 @@ interface INavigationLink {
   link: string;
 }
 
-const NavigationLink = ({ prefix, name, link }: INavigationLink) => {
-  const { route } = useRouter();
+export default function Index({ prefix, name, link }: INavigationLink) {
+  const pathname = usePathname();
   const activeStyles =
-    route === link ? "border-white mobile:border-l-4 tablet:border-b-4" : "";
+    pathname === link ? "border-white mobile:border-l-4 tablet:border-b-4" : "";
 
   return (
     <li
@@ -30,6 +30,4 @@ const NavigationLink = ({ prefix, name, link }: INavigationLink) => {
       </Link>
     </li>
   );
-};
-
-export default NavigationLink;
+}
