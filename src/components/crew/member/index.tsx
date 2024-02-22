@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { CrewMemberType } from "../types";
+import { CrewMemberType } from "../../../types";
 
 interface ICrewMember {
   content: CrewMemberType;
   children?: React.ReactNode;
 }
 
-const CrewMember = ({ content, children }: ICrewMember) => {
+const Member = ({ content, children }: ICrewMember) => {
   return (
     <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-between">
       <div className="max-w-[456px] mobile:w-3/5 tablet:w-3/4 contrast-[.85] desktop:w-full">
@@ -39,4 +39,4 @@ const CrewMember = ({ content, children }: ICrewMember) => {
   );
 };
 
-export default CrewMember;
+export default Member;

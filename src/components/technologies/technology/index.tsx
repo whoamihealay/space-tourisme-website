@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TechnologyType } from "../types";
+import { TechnologyType } from "../../../types";
 
 interface TechProps {
   content: TechnologyType;

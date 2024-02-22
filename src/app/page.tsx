@@ -1,20 +1,31 @@
-import Head from "next/head";
 import React from "react";
 import Background from "@/components/background";
-import Explore from "../components/Explore";
-import Layout from "../components/Layout";
-import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import Explore from "@/components/Explore";
+import Layout from "@/components/Layout";
 import { home, navigation } from "../data/data.json";
 
-const Home = ({
-  data,
-  layout,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+function getPageData() {
+  return {
+    data: home,
+    layout: {
+      navigation: navigation,
+    },
+  };
+}
+
+export async function generateMetadata() {
+  const { data } = getPageData();
+
+  return {
+    title: `${data?.page?.title} | Frontend Mentor`,
+  };
+}
+
+const Home = () => {
+  const { data, layout } = getPageData();
+
   return (
     <div className="min-h-screen">
-      <Head>
-        <title>{`${data?.page?.title} | Frontend Mentor`}</title>
-      </Head>
       <Background data={data?.page?.background} />
       <Layout data={layout}>
         <div className="px-4 mx-auto max-w-[90rem] desktop:flex desktop:justify-between desktop:items-center desktop:mt-12 desktop:ml-auto desktop:max-w-[120rem]">
@@ -35,16 +46,5 @@ const Home = ({
     </div>
   );
 };
-
-export const getStaticProps = (() => {
-  return {
-    props: {
-      data: home,
-      layout: {
-        navigation: navigation,
-      },
-    },
-  };
-}) satisfies GetStaticProps;
 
 export default Home;
