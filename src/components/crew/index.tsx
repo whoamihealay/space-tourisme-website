@@ -22,11 +22,10 @@ const Crew = ({ content }: { content: CrewMemberType[] }) => {
         onClick={changeMember}
         className={`flex gap-4 p-4 even:bg-accent/100`}
       >
-        {content?.map((item) => (
+        {content?.map((item, index) => (
           <div
             key={item.name}
-            id={`active-${active}`}
-            className="h-2 w-2 rounded-full bg-accent opacity-30 desktop:h-4 desktop:w-4"
+            className={`h-2 w-2 rounded-full bg-accent desktop:h-4 desktop:w-4 ${index === active ? "opacity-100" : "opacity-30"}`}
           ></div>
         ))}
         <span className="sr-only">next crew</span>

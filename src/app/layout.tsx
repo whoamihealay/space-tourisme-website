@@ -20,7 +20,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="min-h-screen text-center">{children}</div>
+      </body>
     </html>
   );
 }

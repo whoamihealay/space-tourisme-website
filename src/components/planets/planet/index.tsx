@@ -8,9 +8,9 @@ interface PlanetsProps {
 
 const Planets = ({ content, children }: PlanetsProps) => {
   return (
-    <div className="text-center desktop:text-left flex flex-col items-center desktop:items-start desktop:flex-row desktop:justify-around desktop:gap-16">
+    <div className="flex flex-col items-center text-center desktop:flex-row desktop:items-start desktop:justify-around desktop:gap-16 desktop:text-left">
       {content.images && (
-        <div className="min-w-[250px] w-1/2 p-8 animate-spin-slow desktop:w-full">
+        <div className="w-1/2 min-w-[250px] animate-spin-slow p-8 desktop:w-full">
           <Image
             src={content.images.webp}
             alt={content.name}
@@ -20,11 +20,11 @@ const Planets = ({ content, children }: PlanetsProps) => {
         </div>
       )}
       <article className="flex flex-col desktop:min-h-[27rem] desktop:w-full">
-        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 mx-0 relative">
+        <div className="relative m-2 mx-0 flex justify-center gap-4 desktop:my-2 desktop:justify-start">
           {children}
         </div>
         <h2 className="font-serif text-3xl uppercase">{content.name}</h2>
-        <p className="p-4 text-accent text-center leading-8 max-w-[50ch] tablet:px-0 tablet:max-w-prose desktop:max-w-[45ch] desktop:text-left">
+        <p className="max-w-[50ch] p-4 text-center leading-8 text-accent tablet:max-w-prose tablet:px-0 desktop:max-w-[45ch] desktop:text-left">
           {content.description}
         </p>
         <hr className="w-full opacity-30" />

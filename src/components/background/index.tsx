@@ -3,39 +3,20 @@ import Image from "next/image";
 
 interface IProps {
   data: BackgroundType;
+  viewport: string;
 }
 
-const Background = ({ data }: IProps) => {
+const Background = ({ data, viewport }: IProps) => {
   return (
     <div>
-      <div className="tablet:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
+      <div className="fixed inset-0 -z-50 min-h-[100vw] bg-dark">
         <Image
-          src={data.mobile.src}
-          alt={data.alt}
+          src={data[viewport].src}
+          alt={data[viewport].alt}
           fill={true}
           className="-z-[1]"
           placeholder="blur"
-          blurDataURL={data.mobile.blur}
-        />
-      </div>
-      <div className="hidden tablet:block desktop:hidden bg-dark -z-50 min-h-[100vw] fixed inset-0">
-        <Image
-          src={data.tablet.src}
-          alt={data.alt}
-          fill={true}
-          className="-z-[1]"
-          placeholder="blur"
-          blurDataURL={data.tablet.blur}
-        />
-      </div>
-      <div className="hidden desktop:block bg-dark -z-50 min-h-[100vw] fixed inset-0">
-        <Image
-          src={data.desktop.src}
-          alt={data.alt}
-          fill={true}
-          className="-z-[1]"
-          placeholder="blur"
-          blurDataURL={data.desktop.blur}
+          blurDataURL={data[viewport].blur}
         />
       </div>
     </div>

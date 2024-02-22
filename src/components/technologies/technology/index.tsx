@@ -8,7 +8,7 @@ interface TechProps {
 
 const Technology = ({ content, children }: TechProps) => {
   return (
-    <div className="text-center desktop:text-left desktop:flex desktop:flex-row-reverse desktop:items-center">
+    <div className="text-center desktop:flex desktop:flex-row-reverse desktop:items-center desktop:text-left">
       {content.images.landscape && content.images.portrait && (
         <div className="my-4">
           <div className="desktop:hidden">
@@ -30,15 +30,15 @@ const Technology = ({ content, children }: TechProps) => {
         </div>
       )}
       <div className="desktop:flex">
-        <div className="flex desktop:flex-col gap-4 justify-center px-4 pt-4 pb-2 relative">
+        <div className="relative flex justify-center gap-4 px-4 pb-2 pt-4 desktop:flex-col">
           {children}
         </div>
         <div className="px-4 py-2">
-          <p className="text-accent uppercase font-sans tracking-widest p-2">
+          <p className="p-2 font-sans uppercase tracking-widest text-accent">
             The terminology...
           </p>
-          <h2 className="text-2xl uppercase font-serif p-2">{content.name}</h2>
-          <p className="text-accent leading-7 px-4 max-w-[50ch] tablet:max-w-prose mx-auto">
+          <h2 className="p-2 font-serif text-2xl uppercase">{content.name}</h2>
+          <p className="mx-auto max-w-[50ch] px-4 leading-7 text-accent tablet:max-w-prose">
             {content.description}
           </p>
         </div>

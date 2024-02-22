@@ -8,29 +8,29 @@ interface ICrewMember {
 
 const Member = ({ content, children }: ICrewMember) => {
   return (
-    <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:text-left desktop:justify-between">
-      <div className="max-w-[456px] mobile:w-3/5 tablet:w-3/4 contrast-[.85] desktop:w-full">
+    <div className="flex flex-col items-center text-center tablet:flex-col-reverse desktop:flex-row-reverse desktop:justify-between desktop:text-left">
+      <div className="max-w-[456px] contrast-[.85] mobile:w-3/5 tablet:w-3/4 desktop:w-full">
         <Image
           src={content?.images.webp}
           alt={content.name}
           width={456}
           height={572}
         />
-        <hr className="hidden tablet:block opacity-10" />
+        <hr className="hidden opacity-10 tablet:block" />
       </div>
       <hr className="w-full opacity-10 tablet:hidden" />
       <div className="tablet:flex tablet:flex-col-reverse">
-        <div className="flex justify-center m-2 gap-4 desktop:justify-start desktop:my-2 desktop:mx-0 relative">
+        <div className="relative m-2 flex justify-center gap-4 desktop:mx-0 desktop:my-2 desktop:justify-start">
           {children}
         </div>
         <article className="flex flex-col">
-          <p className="text-lg uppercase font-serif text-white/50 desktop:px-4">
+          <p className="font-serif text-lg uppercase text-white/50 desktop:px-4">
             {content.role}
           </p>
-          <h2 className="text-2xl uppercase font-serif desktop:px-4">
+          <h2 className="font-serif text-2xl uppercase desktop:px-4">
             {content.name}
           </h2>
-          <p className="p-4 text-accent text-center leading-8 desktop:text-left tablet:h-40 desktop:h-52 max-w-[50ch]">
+          <p className="max-w-[50ch] p-4 text-center leading-8 text-accent tablet:h-40 desktop:h-52 desktop:text-left">
             {content.bio}
           </p>
         </article>
