@@ -29,19 +29,11 @@ export type TechnologyType = {
 };
 
 export type BackgroundType = {
-  desktop: {
+  [key: string]: {
     src: string;
     blur: string;
+    alt: string;
   };
-  tablet: {
-    src: string;
-    blur: string;
-  };
-  mobile: {
-    src: string;
-    blur: string;
-  };
-  alt: string;
 };
 
 export type NavigationType = {

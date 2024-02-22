@@ -9,7 +9,7 @@ const HamburgerMenuButton = ({ toggle }: IHamburgerMenuButton) => {
   return (
     <button
       onClick={toggle}
-      className="tablet:hidden mobile:border-none mobile:z-50 mobile:top-8 mobile:right-8"
+      className="mobile:right-8 mobile:top-8 mobile:z-50 mobile:border-none tablet:hidden"
     >
       <Image
         src={"/assets/shared/icon-hamburger.svg"}

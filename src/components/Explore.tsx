@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Explore = () => {
   return (
-    <Link href="/destination">
-      <div className="relative w-36 h-36 my-16 mx-auto bg-white text-dark flex justify-center items-center rounded-full font-serif text-xl uppercase cursor-pointer hover:shadow-white/10 hover:shadow-explore tablet:w-60 tablet:h-60 tablet:shadow-xl desktop:w-72 desktop:h-72 desktop:shadow-2xl">
+    <Link href="/destinations">
+      <div className="relative mx-auto my-16 flex h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-serif text-xl uppercase text-dark hover:shadow-explore hover:shadow-white/10 tablet:h-60 tablet:w-60 tablet:shadow-xl desktop:h-72 desktop:w-72 desktop:shadow-2xl">
         Explore
       </div>
     </Link>

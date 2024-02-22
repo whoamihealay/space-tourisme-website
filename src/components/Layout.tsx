@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Navigation from "@/components/navigation";
 import { NavigationType } from "@/types/index";
 
@@ -16,8 +15,7 @@ const Layout = ({ data, children }: ILayout) => {
       <Header>
         <Navigation menu={data?.navigation?.menu} />
       </Header>
-      <main className="z-10 px-4 mx-auto max-w-7xl">{children}</main>
-      <Footer />
+      <main className="z-10 mx-auto max-w-7xl px-4">{children}</main>
     </>
   );
 };

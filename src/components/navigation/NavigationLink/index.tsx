@@ -15,9 +15,9 @@ export default function Index({ prefix, name, link }: INavigationLink) {
 
   return (
     <li
-      className={`mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 hover:border-white/30 border-solid py-4 ${activeStyles}`}
+      className={`border-solid py-4 hover:border-white/30 mobile:p-4 hover:mobile:border-l-4 hover:tablet:border-b-4 ${activeStyles}`}
     >
-      <Link href={link} className="text-white flex gap-2">
+      <Link href={link} className="flex gap-2 text-white">
         {prefix && (
           <span
             aria-hidden="true"

@@ -20,28 +20,29 @@ export async function generateMetadata() {
   };
 }
 
-const Page = () => {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const { data, layout } = getPageData();
+  const viewport = searchParams.viewport as string;
 
   return (
-    <div className="min-h-screen text-center">
-      <Background data={data?.page?.background} />
-      <Layout data={layout}>
-        <div>
-          <h1 className="font-sans text-lg uppercase text-white tablet:text-left tablet:pl-8 desktop:px-4 tracking-widest">
-            <span
-              className="text-lg opacity-25 px-2 font-bold"
-              aria-hidden="true"
-            >
-              02
-            </span>{" "}
-            Meet your crew
-          </h1>
-          <Crew content={data?.content} />
-        </div>
-      </Layout>
-    </div>
+    <Layout data={layout}>
+      <Background data={data?.page?.background} viewport={viewport} />
+      <div>
+        <h1 className="font-sans text-lg uppercase tracking-widest text-white tablet:pl-8 tablet:text-left desktop:px-4">
+          <span
+            className="px-2 text-lg font-bold opacity-25"
+            aria-hidden="true"
+          >
+            02
+          </span>{" "}
+          Meet your crew
+        </h1>
+        <Crew content={data?.content} />
+      </div>
+    </Layout>
   );
-};
-
-export default Page;
+}
